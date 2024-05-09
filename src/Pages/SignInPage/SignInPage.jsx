@@ -54,6 +54,14 @@ const SignInPage = () => {
                     <h1 className="text-5xl mt-5 font-bold">Sign In now!</h1>
                 </div>
                 <div className=" w-full shadow-2xl shadow-black max-w-xl rounded-lg bg-base-100 mt-5 md:mt-0">
+                    <div className="mt-5 p-5 w-full grid gap-5">
+                        <button className="btn w-full" onClick={() => handleSocialMediaSignIn(googleSignIn)}>
+                            Google
+                        </button>
+                        <button className="btn w-full" onClick={() => handleSocialMediaSignIn(githubSignIn)}>
+                            Github
+                        </button>
+                    </div>
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -85,17 +93,6 @@ const SignInPage = () => {
                             <Link to="/signUp"><p className="text-sky-400 font-bold hover:text-black link link-hover">Sign Up</p></Link>
                         </div>
                     </form>
-                    <div className="pb-5 -mt-5">
-                        <div className="text-xl font-bold text-center text-orange-500">OR</div>
-                        <div className="mt-2 grid place-content-center">
-                            <button className="btn" onClick={() => handleSocialMediaSignIn(googleSignIn)}>
-                                Google
-                            </button>
-                            <button className="btn" onClick={() => handleSocialMediaSignIn(githubSignIn)}>
-                                Github
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
             <Toaster
