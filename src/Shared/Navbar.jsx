@@ -31,8 +31,8 @@ const Navbar = () => {
         <li className="md:hover:text-orange-600 font-extrabold"><NavLink to="/">Home </NavLink></li>
         <li className="md:hover:text-orange-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
         {
-            // user? '' 
-            // : 
+            user? '' 
+             : 
             <div>
                 <li className="md:hidden"><NavLink to="/signIn">Sign in</NavLink></li>
                 <li className="md:hidden"><NavLink to="/signUp">Sign up</NavLink></li>
@@ -50,7 +50,7 @@ const Navbar = () => {
     }
 
     return (
-    <div className="navbar p-3">
+    <div className="navbar p-3 bg-gradient-to-r from-pink-500 to-yellow-500">
         <div className="navbar-start">
             <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-outline btn-sm text-white lg:hidden">

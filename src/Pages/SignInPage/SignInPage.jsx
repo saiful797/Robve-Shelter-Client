@@ -23,10 +23,15 @@ const SignInPage = () => {
             if(result.user){
                 toast.success('User logged In Successfully!');
             }
-            
+
             navigate(location?.state || '/');
             
             reset();
+        })
+        .catch(error => {
+            if(error.message){
+                toast.error('Invalid Credential!!')
+            }
         })
         
     }
@@ -38,7 +43,7 @@ const SignInPage = () => {
                 <div className="text-center md:mb-2">
                     <h1 className="text-5xl mt-5 font-bold">Sign In now!</h1>
                 </div>
-                <div className=" w-full max-w-xl rounded-lg bg-base-100 mt-5 md:mt-0">
+                <div className=" w-full shadow-2xl shadow-black max-w-xl rounded-lg bg-base-100 mt-5 md:mt-0">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
