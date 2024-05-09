@@ -3,6 +3,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
 
@@ -49,7 +50,7 @@ const Navbar = () => {
     }
 
     return (
-    <div className="navbar bg-stone-600 p-3">
+    <div className="navbar p-3">
         <div className="navbar-start">
             <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-outline btn-sm text-white lg:hidden">
@@ -61,7 +62,7 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="ml-3 lg:ml-0 text-white">
+            <div className="ml-3 lg:ml-0">
                 <Link to='/' className="text-2xl md:text-4xl font-bold flex">
                     <div className="relative">
                         <h1 className="text-3xl font">RoveShelter</h1>
@@ -70,13 +71,13 @@ const Navbar = () => {
             </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-white">
+            <ul className="menu menu-horizontal px-1">
                     {navLinks}
             </ul>
         </div>
         
         <div className="navbar-end">
-            <div className="flex justify-center items-center mr-5 text-white rounded-full">
+            <div className="flex justify-center items-center mr-5 rounded-full">
                 <label className="swap swap-rotate">
                     <input 
                     
@@ -118,16 +119,17 @@ const Navbar = () => {
                 </div>
                 :
                 <div className="space-x-3 hidden md:flex">
-                    <Link className="btn btn-sm btn-outline text-white" to="/signIn">Sign in</Link>
-                    <Link className="btn btn-sm btn-outline text-white" to="/signUp">Sign up</Link>
+                    <Link className="btn btn-sm btn-outline" to="/signIn">Sign in</Link>
+                    <Link className="btn btn-sm btn-outline" to="/signUp">Sign up</Link>
                 </div>
             }
         </div>
         <Toaster
-                position="top-center"
-                reverseOrder={false}
+            position="top-center"
+            reverseOrder={false}
 
-            />
+        />
+        <Tooltip id="my-tooltip" />
     </div>
   )
 };
