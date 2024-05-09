@@ -109,8 +109,8 @@ const Navbar = () => {
                 // </div>
                 // :
                 <div className="space-x-3 hidden md:flex">
-                    <Link className="btn btn-sm btn-outline text-white" to="/login">Sign in</Link>
-                    <Link className="btn btn-sm btn-outline text-white" to="/register">Sign up</Link>
+                    <Link className="btn btn-sm btn-outline text-white" to="/signIn">Sign in</Link>
+                    <Link className="btn btn-sm btn-outline text-white" to="/signUp">Sign up</Link>
                 </div>
             }
         </div>
