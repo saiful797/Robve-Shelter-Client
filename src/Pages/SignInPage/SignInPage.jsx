@@ -4,12 +4,11 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
-// import SignInWithSocialMedia from "../components/SignInWithSocialMedia/SignInWithSocialMedia";
 // import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
 const SignInPage = () => {
-    const {signInUser} = useAuth();
+    const {signInUser, googleSignIn} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const {register, reset, handleSubmit} = useForm();
 
@@ -36,10 +35,21 @@ const SignInPage = () => {
         
     }
 
+    const handleSocialMediaSignIn = (socialMediaProvider) =>{
+        socialMediaProvider()
+         .then(data =>{
+            if(data.user){
+                toast.success('You Login Successfully!');
+                navigate(location?.state || '/');
+            }
+         })
+    }
+
+
     return (
         <div className="min-h-screen mt-1">
 
-            <div className="hero-content flex-col border-2 border-red-700">
+            <div className="hero-content flex-col">
                 <div className="text-center md:mb-2">
                     <h1 className="text-5xl mt-5 font-bold">Sign In now!</h1>
                 </div>
@@ -76,9 +86,11 @@ const SignInPage = () => {
                         </div>
                     </form>
                     <div className="pb-5 -mt-5">
-                        <div className="text-xl font-bold text-center text-orange-500 font-DancingScript">OR</div>
+                        <div className="text-xl font-bold text-center text-orange-500">OR</div>
                         <div className="mt-2">
-                            {/* <SignInWithSocialMedia/> */}
+                            <button className="btn" onClick={() => handleSocialMediaSignIn(googleSignIn)}>
+                                Google
+                            </button>
                         </div>
                     </div>
                 </div>
