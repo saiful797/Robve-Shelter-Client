@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 const SignInPage = () => {
-    const {signInUser, googleSignIn} = useAuth();
+    const {signInUser, googleSignIn,githubSignIn} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const {register, reset, handleSubmit} = useForm();
 
@@ -87,9 +87,12 @@ const SignInPage = () => {
                     </form>
                     <div className="pb-5 -mt-5">
                         <div className="text-xl font-bold text-center text-orange-500">OR</div>
-                        <div className="mt-2">
+                        <div className="mt-2 grid place-content-center">
                             <button className="btn" onClick={() => handleSocialMediaSignIn(googleSignIn)}>
                                 Google
+                            </button>
+                            <button className="btn" onClick={() => handleSocialMediaSignIn(githubSignIn)}>
+                                Github
                             </button>
                         </div>
                     </div>

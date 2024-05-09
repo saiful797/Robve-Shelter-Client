@@ -36,7 +36,12 @@ const FirebaseProvider = ({children}) => {
     // Log in with PopUp
     const googleSignIn = () =>{
         setLoading(true);
-        return signInWithPopup(auth, googleProvider)
+        return signInWithPopup(auth, googleProvider);
+    }
+
+    const githubSignIn = () => {
+        setLoading(true);
+        return signInWithPopup(auth, githubProvider);
     }
 
     // User LogOut process
@@ -62,6 +67,7 @@ const FirebaseProvider = ({children}) => {
         updateUserProfile,
         signInUser,
         googleSignIn,
+        githubSignIn,
         logOut,
         loading,
         user,
