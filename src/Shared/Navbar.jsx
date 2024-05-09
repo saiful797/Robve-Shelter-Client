@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../Hooks/useAuth/useAuth";
+import toast, { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
+
+    const {user, logOut} = useAuth();
+
     // Toggle 'Dark' and 'Light' theme
     const [theme, setTheme] = useState(localStorage.getItem("theme")? localStorage.getItem("theme") : "light");
     const handleToggle = (e) =>{
@@ -35,9 +40,13 @@ const Navbar = () => {
             
     </>
 
-    // const myFunction = () =>{
+    const myFunction = () =>{
+        logOut()
+        .then(()=>{
+            toast.success('Logout Successful!!')
+        })
 
-    // }
+    }
 
     return (
     <div className="navbar bg-stone-600 p-3">
@@ -85,36 +94,40 @@ const Navbar = () => {
             </div>
 
             {
-                // user?<div className="flex justify-center items-center gap-2">
+                user?<div className="flex justify-center items-center gap-2">
 
-                //     <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
-                //         <div tabIndex={0}>
-                //             <div className="w-12 h-12" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} data-tooltip-place="left">
+                    <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                        <div tabIndex={0}>
+                            <div className="w-12 h-12" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} data-tooltip-place="left">
                                 
-                //                 {user?.photoURL ?(
-                //                     <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="User profile"/>
-                //                 ) : (
-                //                     <img className="w-12 h-12 rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile"/>
-                //                 )}
+                                {user?.photoURL ?(
+                                    <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="User profile"/>
+                                ) : (
+                                    <img className="w-12 h-12 rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile"/>
+                                )}
                                 
-                //             </div>
-                //         </div>
-                //         <div className="dropdown-content z-[1] menu">
-                //             <NavLink to="/">
-                //                 <button onClick={myFunction} className="btn btn-sm bg-black text-white">Logout</button> 
-                //             </NavLink>
-                //         </div>
-                //     </div>
+                            </div>
+                        </div>
+                        <div className="dropdown-content z-[1] menu">
+                            <NavLink to="/">
+                                <button onClick={myFunction} className="btn btn-sm bg-black text-white">Logout</button> 
+                            </NavLink>
+                        </div>
+                    </div>
 
-                // </div>
-                // :
+                </div>
+                :
                 <div className="space-x-3 hidden md:flex">
                     <Link className="btn btn-sm btn-outline text-white" to="/signIn">Sign in</Link>
                     <Link className="btn btn-sm btn-outline text-white" to="/signUp">Sign up</Link>
                 </div>
             }
         </div>
-        
+        <Toaster
+                position="top-center"
+                reverseOrder={false}
+
+            />
     </div>
   )
 };

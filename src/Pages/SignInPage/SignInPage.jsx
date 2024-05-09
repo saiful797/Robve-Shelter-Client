@@ -1,41 +1,44 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth/useAuth";
+import toast, { Toaster } from "react-hot-toast";
 // import SignInWithSocialMedia from "../components/SignInWithSocialMedia/SignInWithSocialMedia";
 // import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
 const SignInPage = () => {
+    const {signInUser} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
-    const {register , handleSubmit} = useForm();
+    const {register, reset, handleSubmit} = useForm();
 
     // Navigation Process
-    // const navigate = useNavigate(null);
+    const navigate = useNavigate(null);
 
     const onSubmit = (data) => {
-        // const {email, password} = data;
+        const {email, password} = data;
         console.log(data);
-        // singInUser(email, password).then(result => {
-        //     if(result.user){
-        //         // 
-        //     }
-
-        //     navigate(location?.state || '/');
+        signInUser(email, password).then(result => {
+            if(result.user){
+                toast.success('User logged In Successfully!');
+            }
             
-        //     reset();
-        // })
+            navigate(location?.state || '/');
+            
+            reset();
+        })
         
     }
 
     return (
         <div className="min-h-screen mt-1">
 
-            <div className="hero-content flex-col">
+            <div className="hero-content flex-col border-2 border-red-700">
                 <div className="text-center md:mb-2">
                     <h1 className="text-5xl mt-5 font-bold">Sign In now!</h1>
                 </div>
-                <div className=" w-full max-w-sm rounded-lg bg-base-100 mt-5 md:mt-0">
+                <div className=" w-full max-w-xl rounded-lg bg-base-100 mt-5 md:mt-0">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -75,6 +78,11 @@ const SignInPage = () => {
                     </div>
                 </div>
             </div>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+
+            />
         </div>
     );
     
