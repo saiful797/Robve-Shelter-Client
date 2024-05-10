@@ -19,7 +19,7 @@ const ReactTypeWriter = () => {
     return (
         <div className="flex justify-center items-center">
             <div className="text-sm md:text-xl font-medium font-Robot md:font-bold">
-                <h3 className="text-lime-400 mb-2">
+                <h3 className="text-red-600 mb-2">
                     {text}
                     <span className='md:text-2xl font-Madimi md:font-bold'>
                         <Cursor cursorStyle='|' cursorColor='red'/>
