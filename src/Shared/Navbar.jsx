@@ -73,7 +73,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
-                    {navLinks}
+                {navLinks}
             </ul>
         </div>
         
@@ -120,8 +120,8 @@ const Navbar = () => {
                 </div>
                 :
                 <div className="space-x-3 hidden md:flex">
-                    <Link className="btn btn-sm btn-outline" to="/signIn">Sign in</Link>
-                    <Link className="btn btn-sm btn-outline" to="/signUp">Sign up</Link>
+                    <Link className="btn btn-sm btn-outline text-white" to="/signIn">Sign in</Link>
+                    <Link className="btn btn-sm btn-outline text-white" to="/signUp">Sign up</Link>
                 </div>
             }
         </div>
