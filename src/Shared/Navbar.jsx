@@ -62,12 +62,11 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="ml-3 lg:ml-0">
+            <div className="ml-3 lg:ml-5">
                 <Link to='/' className="text-2xl md:text-4xl font-bold flex">
                     <div className="relative">
                         <h1 className="text-3xl font-Madimi bg-gradient-to-r from-pink-500 to-yellow-500 inline-block text-transparent bg-clip-text"><span>Rove</span><span>Shelter</span></h1>
                     </div>
-                    {/* <img className="w-20 h-20 rounded-full" src="https://i.postimg.cc/Xq1swsVP/rS.jpg" alt="" /> */}
                 </Link>
             </div>
         </div>
@@ -110,7 +109,7 @@ const Navbar = () => {
                                 
                             </div>
                         </div>
-                        <div className="dropdown-content z-[1] menu">
+                        <div className="dropdown-content z-[10] menu">
                             <NavLink to="/">
                                 <button onClick={myFunction} className="btn btn-sm bg-black text-white">Logout</button> 
                             </NavLink>
@@ -120,8 +119,8 @@ const Navbar = () => {
                 </div>
                 :
                 <div className="space-x-3 hidden md:flex">
-                    <Link className="btn btn-sm btn-outline text-white" to="/signIn">Sign in</Link>
-                    <Link className="btn btn-sm btn-outline text-white" to="/signUp">Sign up</Link>
+                    <Link className="btn btn-sm bg-gradient-to-r from-indigo-500 text-lg text-rose-500" to="/signIn">Sign In</Link>
+                    <Link className="btn btn-sm bg-gradient-to-r from-purple-500 text-lg text-rose-500" to="/signUp">Sign Up</Link>
                 </div>
             }
         </div>
