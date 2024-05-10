@@ -1,16 +1,19 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useURL from "../../../Hooks/useURL/useURL";
 
 const FeaturedRooms = () => {
-    // const [rooms, setRooms] = useState([]);
+    const [rooms, setRooms] = useState([]);
     const url = useURL();
     useEffect(()=>{
         axios.get(`${url}/rooms`)
          .then(res => {
-            console.log(res.data);
+            // console.log(res.data);
+            setRooms(res.data);
          })
-    },[url])
+    },[url]);
+
+    
     return (
         <div>
             
