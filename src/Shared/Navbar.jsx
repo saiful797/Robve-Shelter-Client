@@ -44,13 +44,13 @@ const Navbar = () => {
     const myFunction = () =>{
         logOut()
         .then(()=>{
-            toast.success('Logout Successful!!')
+            toast.success('Logout Successful!!');
         })
 
     }
 
     return (
-    <div className="navbar bg-black rounded-lg mt-2">
+    <div className="navbar bg-black md:rounded-lg mt-2">
         <div className="navbar-start">
             <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-outline btn-sm text-white lg:hidden">
@@ -65,7 +65,7 @@ const Navbar = () => {
             <div className="ml-3 lg:ml-0">
                 <Link to='/' className="text-2xl md:text-4xl font-bold flex">
                     <div className="relative">
-                        <h1 className="text-3xl font-Madimi bg-gradient-to-r from-[#ffd89b] to-[#19547b] inline-block text-transparent bg-clip-text"><span>Rove</span><span>Shelter</span></h1>
+                        <h1 className="text-3xl font-Madimi bg-gradient-to-r from-pink-500 to-yellow-500 inline-block text-transparent bg-clip-text"><span>Rove</span><span>Shelter</span></h1>
                     </div>
                     {/* <img className="w-20 h-20 rounded-full" src="https://i.postimg.cc/Xq1swsVP/rS.jpg" alt="" /> */}
                 </Link>
