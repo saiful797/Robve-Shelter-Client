@@ -1,11 +1,15 @@
 import NewsLetterSubscribe from "../NewsLetterSubscrib/NewsLetterSubscribe";
 import Slider from "../Slider/Slider";
+import FeaturedRooms from "../featuredRooms/FeaturedRooms";
 
 const Home = () => {
     return (
         <div className="mt-5">
             {/* Slider */}
             <Slider />
+            <div>
+                <FeaturedRooms />
+            </div>
             
             <div className="mx-auto flex justify-center items-center shadow shadow-black mt-10 lg:w-3/4">
                 <NewsLetterSubscribe />
