@@ -1,3 +1,4 @@
+import PrivateRoute from "../../../Private/PrivateRoute";
 import NewsLetterSubscribe from "../NewsLetterSubscrib/NewsLetterSubscribe";
 import Slider from "../Slider/Slider";
 import FeaturedRooms from "../featuredRooms/FeaturedRooms";
@@ -11,7 +12,9 @@ const Home = () => {
                     Featured Rooms
                 </h1>
             <div className=" mx-auto bg-slate-400 pt-5 pb-5 rounded-3xl">
-                <FeaturedRooms />
+                <PrivateRoute>
+                    <FeaturedRooms />
+                </PrivateRoute>
             </div>
             
             <div className="mx-auto flex justify-center items-center shadow shadow-black mt-16 lg:w-3/4">
