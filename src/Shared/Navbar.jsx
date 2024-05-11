@@ -29,7 +29,7 @@ const Navbar = () => {
 
     const navLinks=<>
         <li className=" font-extrabold"><NavLink to="/">Home </NavLink></li>
-        <li className=" font-medium"><NavLink to="/rooms">Rooms</NavLink></li> 
+        <li className=" font-medium"><NavLink to="/rooms">All Rooms</NavLink></li> 
         {
             user?<div>
                 <li className=" font-medium"><NavLink to="/myList">My List</NavLink></li>

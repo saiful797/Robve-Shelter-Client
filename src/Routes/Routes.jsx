@@ -4,7 +4,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/HomePage/Home/Home";
 import SignInPage from "../Pages/SignInPage/SignInPage";
 import SignUpPage from "../Pages/SignUpPage/SignUpPage";
-import RoomsPage from "../Pages/RoomsPage/RoomsPage";
+import RoomsPage from "../Pages/AllRoomsPage/RoomsPage";
 import RoomDetailsPage from "../Pages/RoomDetailsPage/RoomDetailsPage";
 import About from "../Pages/AboutPage/About";
 import MyListPage from "../Pages/MyListPage/MyListPage";
