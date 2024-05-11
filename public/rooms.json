@@ -7,6 +7,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/QtZTcYWb/19.jpg",
       "offers": ["Complimentary breakfast", "Free Wi-Fi"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -17,6 +18,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/J7cb58xB/2.jpg",
       "offers": ["Late check-out", "Welcome drink"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -24,9 +26,10 @@
       "description": "Treat yourself to a memorable stay in our Family Suite with ample space for relaxation. Ideal for families or groups, this suite features separate sleeping and living areas for added privacy. Enjoy breathtaking views of the mountains or city skyline from the comfort of your room. A perfect choice for those seeking comfort and convenience.",
       "price": 300,
       "room_size": "800 sq ft",
-      "availability": false,
+      "availability": true,
       "image": "https://i.postimg.cc/bJ02g0xj/17.jpg",
       "offers": ["Kids stay free", "Complimentary shuttle service"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -37,6 +40,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/3Jf0txvW/15.jpg",
       "offers": ["Daily housekeeping", "Outdoor barbecue area"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -47,6 +51,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/FHyXxmG8/14.jpg",
       "offers": ["Spa package included", "VIP concierge service"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -57,6 +62,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/4xDbXRgf/18.jpg",
       "offers": ["Daily housekeeping", "Outdoor barbecue area"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -67,6 +73,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/kGgWTnxc/16.jpg",
       "offers": ["Private chef service", "Airport transfer"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -77,6 +84,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/rsstSfkZ/20.jpg",
       "offers": ["Complimentary wine tasting", "24-hour room service"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -87,6 +95,7 @@
       "availability": false,
       "image": "https://i.postimg.cc/GhZsyPSz/21.jpg",
       "offers": ["Complimentary wine tasting", "24-hour room service"],
+      "reviews": 0,
       "user_email": ""
     },
     {
@@ -97,6 +106,7 @@
       "availability": true,
       "image": "https://i.postimg.cc/BbPnSks3/22.jpg",
       "offers": ["Sunset cruise included", "Complimentary snorkeling gear"],
+      "reviews": 0,
       "user_email": ""
     }
   ]

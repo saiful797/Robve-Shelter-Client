@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const SpecificRoom = ({room}) => {
-    const {_id,image } = room;
+    const {image } = room;
     return (
         <div className="card w-80 mx-auto bg-base-100 shadow-xl">
             <figure><img src={image} alt="Shoes" /></figure>

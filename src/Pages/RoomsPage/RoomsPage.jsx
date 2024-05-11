@@ -13,13 +13,13 @@ const RoomsPage = () => {
             setRooms(res.data);
          })
     },[url])
-
+    const availableRooms = rooms.filter(room => room.availability === true);
     return (
-        <div className="mt-10">
-            <h1 className="text-6xl font-bold text-center mb-5">Available Rooms</h1>
-            <div className="text-center grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="mt-7">
+            <h1 className="text-6xl font-bold text-center mb-10">Available Rooms</h1>
+            <div className="text-center grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
-                    rooms.map(room => <SpecificRoom key={room._id} room = {room}/>)
+                    availableRooms.map(room => <SpecificRoom key={room._id} room = {room}/>)
                 }
             </div>
         </div>
