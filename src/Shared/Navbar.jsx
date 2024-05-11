@@ -97,7 +97,7 @@ const Navbar = () => {
             </div>
 
             {
-                user?<div className="flex justify-center items-center gap-2">
+                user?<div className="flex justify-center items-center gap-2 mr-3">
 
                     <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
                         <div tabIndex={0}>
@@ -120,7 +120,7 @@ const Navbar = () => {
 
                 </div>
                 :
-                <div className="space-x-3 hidden md:flex">
+                <div className="space-x-3 hidden md:flex mr-3">
                     <Link className="btn btn-sm bg-gradient-to-r from-indigo-500 text-lg text-rose-500" to="/signIn">Sign In</Link>
                     <Link className="btn btn-sm bg-gradient-to-r from-purple-500 text-lg text-rose-500" to="/signUp">Sign Up</Link>
                 </div>
