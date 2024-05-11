@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const SpecificRoom = ({room}) => {
-    const {image } = room;
+    const {_id, image } = room;
     return (
-        <div className="card w-80 mx-auto bg-base-100 shadow-xl">
-            <figure><img src={image} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    Total Reviews: 0
-                </h2>
+        <Link to={`/roomDetails/${_id}`} className="tooltip" data-tip="Click for View Detail">
+            <div className="card w-80 mx-auto bg-base-100 shadow-xl">
+                <figure><img src={image} alt="Room image" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">
+                        Total Reviews: 0
+                    </h2>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
