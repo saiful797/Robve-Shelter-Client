@@ -7,11 +7,11 @@ const Home = () => {
         <div className="mt-5">
             {/* Slider */}
             <Slider />
-            <div>
+            <div className="mt-10 mx-auto bg-slate-400 pt-5 pb-5 rounded-3xl">
                 <FeaturedRooms />
             </div>
             
-            <div className="mx-auto flex justify-center items-center shadow shadow-black mt-10 lg:w-3/4">
+            <div className="mx-auto flex justify-center items-center shadow shadow-black mt-16 lg:w-3/4">
                 <NewsLetterSubscribe />
             </div>
 
