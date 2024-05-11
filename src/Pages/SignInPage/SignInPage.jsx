@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
 // import ScrollToTop from "../components/scrollToTop/ScrollToTop";
@@ -13,7 +13,10 @@ const SignInPage = () => {
     const {register, reset, handleSubmit} = useForm();
 
     // Navigation Process
-    const navigate = useNavigate(null);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    console.log(location);
 
     const onSubmit = (data) => {
         const {email, password} = data;
@@ -23,7 +26,7 @@ const SignInPage = () => {
                 toast.success('User logged In Successfully!');
             }
 
-            navigate(location?.state || '/');
+            navigate(location?.state? location?.state : '/');
             
             reset();
         })

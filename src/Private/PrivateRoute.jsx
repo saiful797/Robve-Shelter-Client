@@ -7,15 +7,15 @@ const PrivateRoute = ({children}) => {
     const {user, loading} = useAuth();
     const location = useLocation();
 
+    console.log(location);
+
     if(loading){
         return <RingLoader className='mx-auto' color="black" size={100} />
     }
     if(user?.email){
         return children;
     }
-
-    return <Navigate to='/signIn' state={ location.pathname || '/'} replace />
-    
+    return <Navigate to='/signIn' state={ location.pathname || '/'} replace />  
 };
 
 PrivateRoute.propTypes ={
