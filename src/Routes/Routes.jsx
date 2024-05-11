@@ -8,6 +8,7 @@ import RoomsPage from "../Pages/AllRoomsPage/RoomsPage";
 import RoomDetailsPage from "../Pages/RoomDetailsPage/RoomDetailsPage";
 import About from "../Pages/AboutPage/About";
 import MyListPage from "../Pages/MyListPage/MyListPage";
+import PrivateRoute from "../Private/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,9 @@ const router = createBrowserRouter([
         },
         {
           path: '/roomDetails/:id',
-          element: <RoomDetailsPage />
+          element:<PrivateRoute>
+            <RoomDetailsPage />
+          </PrivateRoute>
         },
         {
           path: '/about',
