@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
 import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
-
+    const navigate = useNavigate();
     const {user, logOut} = useAuth();
 
     // Toggle 'Dark' and 'Light' theme
@@ -48,6 +48,7 @@ const Navbar = () => {
         logOut()
         .then(()=>{
             toast.success('Logout Successful!!');
+            navigate('/');
         })
 
     }

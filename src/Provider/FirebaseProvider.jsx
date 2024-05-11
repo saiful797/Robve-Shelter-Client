@@ -9,7 +9,6 @@ const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider(); 
 
 const FirebaseProvider = ({children}) => {
-
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
 
