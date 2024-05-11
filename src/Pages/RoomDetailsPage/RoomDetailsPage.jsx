@@ -32,9 +32,10 @@ const RoomDetailsPage = () => {
 
                         <h2 className="text-xl font-extralight">Room Size: <span className="text-2xl font-bold">{room_size}</span></h2>
                         {
-                            availability === true? <h3 className="text-xl font-extralight">Room Available: <span className="text-2xl font-bold">Yes</span></h3>
+                            availability === true? <h3 className="text-xl font-extralight">Room Availability
+                            : <span className="text-2xl font-bold text-green-600">Available</span></h3>
                             :
-                            <h3 className="text-xl font-extralight">Room Available: <span className="text-2xl font-bold">No</span></h3>
+                            <h3 className="text-xl font-extralight">Room Availability: <span className="text-2xl font-bold text-red-600">Unavailable</span></h3>
                         }
                         <h3 className="text-xl font-extralight flex">
                             Special Offer(s): <span className="ml-2 text-2xl font-bold">#{offers}</span>
