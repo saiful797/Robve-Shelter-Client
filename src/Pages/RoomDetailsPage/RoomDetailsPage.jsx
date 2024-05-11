@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useURL from "../../Hooks/useURL/useURL";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const RoomDetailsPage = () => {
     const data = useParams();
@@ -59,6 +59,7 @@ const RoomDetailsPage = () => {
                     </div>   
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };
