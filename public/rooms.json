@@ -6,7 +6,7 @@
       "room_size": "400 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/QtZTcYWb/19.jpg",
-      "offers": ["Complimentary breakfast", "Free Wi-Fi"],
+      "offers": "Complimentary breakfast", 
       "reviews": 0,
       "user_email": ""
     },
@@ -17,7 +17,7 @@
       "room_size": "600 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/J7cb58xB/2.jpg",
-      "offers": ["Late check-out", "Welcome drink"],
+      "offers": "Late check-out",
       "reviews": 0,
       "user_email": ""
     },
@@ -28,7 +28,7 @@
       "room_size": "800 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/bJ02g0xj/17.jpg",
-      "offers": ["Kids stay free", "Complimentary shuttle service"],
+      "offers": "Complimentary shuttle service",
       "reviews": 0,
       "user_email": ""
     },
@@ -39,7 +39,7 @@
       "room_size": "300 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/3Jf0txvW/15.jpg",
-      "offers": ["Daily housekeeping", "Outdoor barbecue area"],
+      "offers": "Outdoor barbecue area",
       "reviews": 0,
       "user_email": ""
     },
@@ -50,7 +50,7 @@
       "room_size": "1200 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/FHyXxmG8/14.jpg",
-      "offers": ["Spa package included", "VIP concierge service"],
+      "offers": "VIP concierge service",
       "reviews": 0,
       "user_email": ""
     },
@@ -61,7 +61,7 @@
       "room_size": "500 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/4xDbXRgf/18.jpg",
-      "offers": ["Daily housekeeping", "Outdoor barbecue area"],
+      "offers": "Outdoor barbecue area",
       "reviews": 0,
       "user_email": ""
     },
@@ -72,7 +72,7 @@
       "room_size": "2000 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/kGgWTnxc/16.jpg",
-      "offers": ["Private chef service", "Airport transfer"],
+      "offers": "Airport transfer",
       "reviews": 0,
       "user_email": ""
     },
@@ -83,7 +83,7 @@
       "room_size": "350 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/rsstSfkZ/20.jpg",
-      "offers": ["Complimentary wine tasting", "24-hour room service"],
+      "offers": "Complimentary wine tasting",
       "reviews": 0,
       "user_email": ""
     },
@@ -94,7 +94,7 @@
       "room_size": "400 sq ft",
       "availability": false,
       "image": "https://i.postimg.cc/GhZsyPSz/21.jpg",
-      "offers": ["Complimentary wine tasting", "24-hour room service"],
+      "offers": "24-hour room service",
       "reviews": 0,
       "user_email": ""
     },
@@ -105,7 +105,7 @@
       "room_size": "700 sq ft",
       "availability": true,
       "image": "https://i.postimg.cc/BbPnSks3/22.jpg",
-      "offers": ["Sunset cruise included", "Complimentary snorkeling gear"],
+      "offers":"Complimentary snorkeling gear",
       "reviews": 0,
       "user_email": ""
     }

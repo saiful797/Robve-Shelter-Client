@@ -36,15 +36,11 @@ const RoomDetailsPage = () => {
                             :
                             <h3 className="text-xl font-extralight">Room Available: <span className="text-2xl font-bold">No</span></h3>
                         }
-                        <div className="text-xl font-extralight flex">
-                            Special Offers:
-                            <div className="ml-2 grid md:grid-cols-2">
-                                <h4 className="text-2xl font-bold">#{offers[0]}</h4>
-                                <h4 className="text-2xl font-bold">#{offers[1]}</h4>
-                            </div>
-                        </div>
+                        <h3 className="text-xl font-extralight flex">
+                            Special Offer(s): <span className="text-2xl font-bold">#{offers}</span>
+                        </h3>
                         <p className="text-justify">
-                            <span className="text-2xl font-bold text-stone-600">Description:</span> {description}
+                            <span className="text-2xl font-bold text-stone-600">Description: </span> {description}
                         </p> 
                     </div>
                     <div className="w-full absolute bottom-0 left-0">

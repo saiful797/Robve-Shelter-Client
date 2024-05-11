@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import ReactTypeWriter from './TypeWriter/ReactTypeWriter';
 import { FaArrowRightToBracket } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
     
@@ -26,13 +27,13 @@ const Slider = () => {
                     </div>
                     <div className='md:rounded-r-lg flex flex-col justify-center items-center md:space-y-4 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 p-4'>
                         <h1 className="text-stone-700 text-center md:text-4xl font-bold">Welcome To Our Website!</h1>
-                         <div>
+                        <div>
                             <ReactTypeWriter />
-                         </div>
-                        <button className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2'>
+                        </div>
+                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </SwiperSlide>
@@ -43,13 +44,13 @@ const Slider = () => {
                     </div>
                     <div className='md:rounded-r-lg flex flex-col justify-center items-center md:space-y-4 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 p-4'>
                         <h1 className="text-stone-700 text-center md:text-4xl font-bold">Welcome To Our Website!</h1>
-                         <div className='mx-auto'>
+                        <div className='mx-auto'>
                             <ReactTypeWriter />
-                         </div>
-                        <button className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2'>
+                        </div>
+                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </SwiperSlide>
@@ -60,13 +61,13 @@ const Slider = () => {
                     </div>
                     <div className='md:rounded-r-lg flex flex-col justify-center items-center md:space-y-4 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 p-4'>
                         <h1 className="text-stone-700 text-center md:text-4xl font-bold">Welcome To Our Website!</h1>
-                         <div className='mx-auto'>
+                        <div className='mx-auto'>
                             <ReactTypeWriter />
-                         </div>
-                        <button className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2'>
+                        </div>
+                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </SwiperSlide>
@@ -77,13 +78,14 @@ const Slider = () => {
                     </div>
                     <div className='md:rounded-r-lg flex flex-col justify-center items-center md:space-y-4 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 p-4'>
                         <h1 className="text-stone-700 text-center md:text-4xl font-bold">Welcome To Our Website!</h1>
-                         <div className='mx-auto'>
+                        <div className='mx-auto'>
                             <ReactTypeWriter />
-                         </div>
-                        <button className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2'>
+                        </div>
+
+                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </SwiperSlide>
