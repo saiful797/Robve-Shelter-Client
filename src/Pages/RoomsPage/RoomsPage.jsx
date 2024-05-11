@@ -12,8 +12,10 @@ const RoomsPage = () => {
          .then(res => {
             setRooms(res.data);
          })
-    },[url])
+    },[url]);
+    
     const availableRooms = rooms.filter(room => room.availability === true);
+
     return (
         <div className="mt-7">
             <h1 className="text-6xl font-bold text-center mb-10">Available Rooms</h1>

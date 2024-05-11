@@ -15,7 +15,7 @@ const FeaturedRooms = () => {
             setRooms(res.data);
          })
     },[url]);
-
+    const availableRooms = rooms.filter(room => room.availability === true);
     const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1200 },
@@ -34,7 +34,7 @@ const FeaturedRooms = () => {
     return (
         <Carousel responsive={responsive}>
             {
-                rooms.map(room => <Room key={room._id} room ={room} />)
+              availableRooms.map(room => <Room key={room._id} room ={room} />)
             }
         </Carousel>  
     );
