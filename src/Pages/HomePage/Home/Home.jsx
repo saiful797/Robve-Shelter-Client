@@ -1,3 +1,4 @@
+import ScrollToTop from "../../../Shared/ScrollToTop/ScrollToTop";
 import NewsLetterSubscribe from "../NewsLetterSubscrib/NewsLetterSubscribe";
 import Slider from "../Slider/Slider";
 import FeaturedRooms from "../featuredRooms/FeaturedRooms";
@@ -23,7 +24,7 @@ const Home = () => {
                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=18BVm-G5RPqI1t2fkL31jL12NfxxJAO0&ehbc=2E312F&noprof=1"
                 className="w-full h-[400px]"></iframe>
             </div>
-            
+            <ScrollToTop />
         </div>
     );
 };
