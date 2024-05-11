@@ -40,7 +40,9 @@ const router = createBrowserRouter([
         },
         {
           path: '/myList',
-          element: <MyListPage />
+          element: <PrivateRoute>
+            <MyListPage />
+          </PrivateRoute>
         },
         {
           path: '/signUp',
