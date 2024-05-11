@@ -15,6 +15,7 @@ const RoomsPage = () => {
         })
     },[url]);
 
+    // sorted rooms by price
     const handleRoomsShortByPrice = () =>{
         setRooms([]);
         axios.get(`${url}/prices`)
@@ -25,6 +26,7 @@ const RoomsPage = () => {
 
     return (
         <div className="mt-10">
+            {/* sorted rooms by price */}
             <div className="mb-5 flex justify-center">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-sm btn-accent m-1 flex justify-center items-center">
@@ -37,6 +39,7 @@ const RoomsPage = () => {
                     </ul>
                 </div>
             </div>
+            {/* all rooms */}
             <div className="text-center grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
                     rooms.map(room => <SpecificRoom key={room._id} room = {room}/>)
