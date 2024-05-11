@@ -19,7 +19,7 @@ const Room = ({room}) => {
                 <h2  className="text-xl font-extralight">Price(Per Night): <span className='text-2xl font-medium'>${price-1000}</span></h2>
                 <h3 className='truncate-3-lines text-justify'><span className="text-2xl font-bold text-stone-400">Description: </span>  {description}</h3>
                 <div className="card-actions justify-end absolute bottom-2 w-4/5">
-                    <button className="btn btn-ghost bg-gradient-to-r from-pink-500 to-yellow-500 rounded-none border-none w-full hover:from-black hover:to-black text-xl font-medium">Book Now</button>
+                    <button className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium">Book Now</button>
                 </div>
             </div>
         </div>
