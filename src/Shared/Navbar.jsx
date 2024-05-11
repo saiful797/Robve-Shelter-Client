@@ -29,8 +29,7 @@ const Navbar = () => {
 
     const navLinks=<>
         <li className=" font-extrabold"><NavLink to="/">Home </NavLink></li>
-        <li className=" font-medium"><NavLink to="/rooms">Rooms</NavLink></li>
-        <li className=" font-medium"><NavLink to="/about">About Us</NavLink></li>  
+        <li className=" font-medium"><NavLink to="/rooms">Rooms</NavLink></li> 
         {
             user?<div>
                 <li className=" font-medium"><NavLink to="/myList">My List</NavLink></li>
@@ -41,6 +40,7 @@ const Navbar = () => {
                 <li className="md:hidden"><NavLink to="/signUp">Sign up</NavLink></li>
             </div>
         }
+        <li className=" font-medium"><NavLink to="/about">About Us</NavLink></li> 
             
     </>
 

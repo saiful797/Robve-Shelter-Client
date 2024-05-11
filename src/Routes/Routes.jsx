@@ -7,6 +7,7 @@ import SignUpPage from "../Pages/SignUpPage/SignUpPage";
 import RoomsPage from "../Pages/RoomsPage/RoomsPage";
 import RoomDetailsPage from "../Pages/RoomDetailsPage/RoomDetailsPage";
 import About from "../Pages/AboutPage/About";
+import MyListPage from "../Pages/MyListPage/MyListPage";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         {
           path: '/signIn',
           element: <SignInPage />
+        },
+        {
+          path: '/myList',
+          element: <MyListPage />
         },
         {
           path: '/signUp',
