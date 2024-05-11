@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
     // console.log(location);
 
     if(loading){
-        return <RingLoader className='mx-auto' color="black" size={100} />
+        return <RingLoader className='mx-auto' color="black" size={200} />
     }
     if(user?.email){
         return children;
