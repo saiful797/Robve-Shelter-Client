@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
+import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 
 const SignUpPage = () => {
 
@@ -117,8 +118,8 @@ const SignUpPage = () => {
             <Toaster
                 position="top-center"
                 reverseOrder={false}
-
             />
+            <ScrollToTop />
         </div>
     );
 };

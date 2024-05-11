@@ -1,5 +1,6 @@
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 
 const ErrorPage = () => {
     return (
@@ -15,6 +16,7 @@ const ErrorPage = () => {
             <div className="w-1/2">
                 <img src="https://i.ibb.co/2Z9pSVL/404.png" alt="error image" />
             </div>
+            <ScrollToTop />
         </div>
     );
 };

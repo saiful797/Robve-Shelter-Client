@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
+import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 // import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
@@ -101,8 +102,8 @@ const SignInPage = () => {
             <Toaster
                 position="top-center"
                 reverseOrder={false}
-
             />
+            <ScrollToTop />
         </div>
     );
     

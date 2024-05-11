@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useURL from "../../Hooks/useURL/useURL";
 import SpecificRoom from "./SpecificRoom";
 import { FaAngleDown } from "react-icons/fa6";
+import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 
 const RoomsPage = () => {
     const [rooms, setRooms] = useState([]);
@@ -47,6 +48,8 @@ const RoomsPage = () => {
                     rooms.map(room => <SpecificRoom key={room._id} room = {room}/>)
                 }
             </div>
+
+            <ScrollToTop />
         </div>
     );
 };

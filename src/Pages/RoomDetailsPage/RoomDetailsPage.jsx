@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useURL from "../../Hooks/useURL/useURL";
 import toast, { Toaster } from "react-hot-toast";
+import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 
 const RoomDetailsPage = () => {
     const data = useParams();
@@ -60,6 +61,7 @@ const RoomDetailsPage = () => {
                 </div>
             </div>
             <Toaster />
+            <ScrollToTop />
         </div>
     );
 };
