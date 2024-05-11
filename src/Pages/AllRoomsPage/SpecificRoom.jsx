@@ -7,7 +7,7 @@ const SpecificRoom = ({room}) => {
         <Link to={`/roomDetails/${_id}`} className="tooltip" data-tip="Click for View Detail">
             <div className="card w-80 mx-auto bg-base-100 shadow-xl">
                 <figure><img src={image} alt="Room image" /></figure>
-                <div className="card-body">
+                <div className="">
                     <h2 className="card-title">
                         Total Reviews: 0
                     </h2>
