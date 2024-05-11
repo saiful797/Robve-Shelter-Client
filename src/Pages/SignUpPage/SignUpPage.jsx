@@ -56,10 +56,9 @@ const SignUpPage = () => {
         }
 
         signUpUser(email, password).then(() => {
-            
-            // alert('User Create Successfully!')
-            toast.success('User Create Successfully!');
 
+            toast.success('User Create Successfully!');
+            
             updateUserProfile(name, imageURL).then(() => {
                 navigate(location?.state || '/');
             })
