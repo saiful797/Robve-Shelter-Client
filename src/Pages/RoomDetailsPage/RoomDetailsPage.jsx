@@ -28,7 +28,7 @@ const RoomDetailsPage = () => {
 
                 <div className="relative">
                     <div className="p-5 space-y-3">
-                        <h1 className="text-xl font-extralight">Average Cost(per Night): <span className="text-2xl font-bold">${price}</span></h1>
+                        <h1 className="text-xl font-extralight">Average Cost(per Night): <span className="text-2xl font-bold">${price-1000}</span></h1>
 
                         <h2 className="text-xl font-extralight">Room Size: <span className="text-2xl font-bold">{room_size}</span></h2>
                         {
@@ -37,7 +37,7 @@ const RoomDetailsPage = () => {
                             <h3 className="text-xl font-extralight">Room Available: <span className="text-2xl font-bold">No</span></h3>
                         }
                         <h3 className="text-xl font-extralight flex">
-                            Special Offer(s): <span className="text-2xl font-bold">#{offers}</span>
+                            Special Offer(s): <span className="ml-2 text-2xl font-bold">#{offers}</span>
                         </h3>
                         <p className="text-justify">
                             <span className="text-2xl font-bold text-stone-600">Description: </span> {description}
