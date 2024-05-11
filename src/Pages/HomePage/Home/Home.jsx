@@ -7,7 +7,10 @@ const Home = () => {
         <div className="mt-5">
             {/* Slider */}
             <Slider />
-            <div className="mt-10 mx-auto bg-slate-400 pt-5 pb-5 rounded-3xl">
+            <h1 className="text-6xl font-bold text-center mt-10 mb-5">
+                    Featured Rooms
+                </h1>
+            <div className=" mx-auto bg-slate-400 pt-5 pb-5 rounded-3xl">
                 <FeaturedRooms />
             </div>
             
