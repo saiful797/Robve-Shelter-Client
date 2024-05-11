@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useURL from "../../Hooks/useURL/useURL";
+import toast from "react-hot-toast";
 
 const RoomDetailsPage = () => {
     const data = useParams();
@@ -17,6 +18,11 @@ const RoomDetailsPage = () => {
     },[url, data.id]);
 
     const { room_id, description, price, image, offers, availability, room_size } = specificRoom;
+
+    const handleUnavailableRoom = () => {
+        toast.error('Room Unavailable');
+        return;
+    }
     
     return (
         <div className="mt-10">     
@@ -45,7 +51,11 @@ const RoomDetailsPage = () => {
                         </p> 
                     </div>
                     <div className="w-full absolute bottom-0 left-0">
-                        <button className="w-full rounded-none border-black btn-outline btn bg-black text2xl font-medium text-white rounded-br-lg"> Book Now </button> 
+                        {
+                            availability === true?<button className="w-full rounded-none border-black btn-outline btn bg-black text2xl font-medium text-white rounded-br-lg"> Book Now </button>
+                            :
+                            <button onClick={handleUnavailableRoom} className="w-full rounded-none border-black btn-outline btn bg-black text2xl font-medium text-white rounded-br-lg"> Book Now </button>
+                        } 
                     </div>   
                 </div>
             </div>
