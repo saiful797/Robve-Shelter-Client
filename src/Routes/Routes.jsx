@@ -4,6 +4,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/HomePage/Home/Home";
 import SignInPage from "../Pages/SignInPage/SignInPage";
 import SignUpPage from "../Pages/SignUpPage/SignUpPage";
+import RoomsPage from "../Pages/RoomsPage/RoomsPage";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/rooms',
-          
+          element:<RoomsPage />
         },
         {
           path: '/signIn',

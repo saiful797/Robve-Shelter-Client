@@ -29,6 +29,7 @@ const Navbar = () => {
 
     const navLinks=<>
         <li className=" font-extrabold"><NavLink to="/">Home </NavLink></li>
+        <li className=" font-medium"><NavLink to="/rooms">Rooms</NavLink></li>
         <li className=" font-medium"><NavLink to="/about">About Us</NavLink></li>  
         {
             user? '' 
@@ -70,7 +71,7 @@ const Navbar = () => {
                 </Link>
             </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex text-white">
             <ul className="menu menu-horizontal px-1">
                 {navLinks}
             </ul>
