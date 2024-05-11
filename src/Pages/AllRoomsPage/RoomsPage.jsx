@@ -25,7 +25,7 @@ const RoomsPage = () => {
     }
 
     return (
-        <div className="mt-10">
+        <div className="mt-10 min-h-[43vh]">
             {/* sorted rooms by price */}
             <div className="mb-5 flex justify-center">
                 <div className="dropdown">

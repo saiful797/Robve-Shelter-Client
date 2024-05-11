@@ -1,8 +1,9 @@
 
 const MyListPage = () => {
+    
     return (
-        <div>
-            My List!
+        <div className="min-h-[49vh]">
+            <h1 className="">My List!</h1>
         </div>
     );
 };
