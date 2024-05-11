@@ -30,7 +30,7 @@ const Slider = () => {
                         <div>
                             <ReactTypeWriter />
                         </div>
-                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
+                        <Link className='btn bg-gradient-to-r from-pink-500 to-yellow-500 w-full md:w-1/2 text-lg md:text-xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
                         </Link>
@@ -47,7 +47,7 @@ const Slider = () => {
                         <div className='mx-auto'>
                             <ReactTypeWriter />
                         </div>
-                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
+                        <Link className='btn bg-gradient-to-r from-pink-500 to-yellow-500 w-full md:w-1/2 text-lg md:text-xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
                         </Link>
@@ -64,7 +64,7 @@ const Slider = () => {
                         <div className='mx-auto'>
                             <ReactTypeWriter />
                         </div>
-                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
+                        <Link className='btn bg-gradient-to-r from-pink-500 to-yellow-500 w-full md:w-1/2 text-lg md:text-xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
                         </Link>
@@ -82,7 +82,7 @@ const Slider = () => {
                             <ReactTypeWriter />
                         </div>
 
-                        <Link className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-full md:w-1/2 text-lg md:text-2xl md:font-medium text-white flex gap-2' to='/rooms'> 
+                        <Link className='btn bg-gradient-to-r from-pink-500 to-yellow-500 w-full md:w-1/2 text-lg md:text-xl md:font-medium text-white flex gap-2' to='/rooms'> 
                             Book Room 
                             <FaArrowRightToBracket />
                         </Link>
