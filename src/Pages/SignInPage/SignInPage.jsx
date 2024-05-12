@@ -8,6 +8,7 @@ import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
 import { TiArrowRightOutline } from "react-icons/ti";
+import { Helmet } from "react-helmet-async";
 // import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
@@ -54,7 +55,9 @@ const SignInPage = () => {
 
     return (
         <div className="min-h-screen mt-5">
-
+            <Helmet>
+                <title>Rove Shelter | Sign In </title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black md:w-2/3 mx-auto rounded-2xl">
                 <div className="grid place-content-center text-white p-5 lg:h-[545px] lg:border-l-[12px] lg:border-l-orange-600 bg-blue-900 lg:rounded-l-[260px]">
                     <h1 className="text-2xl md:text-5xl text-center mt-5 font-extrabold mb-10">Welcome!</h1>

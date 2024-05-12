@@ -6,6 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 import BookingRoomModal from "../BookingRoomModal/BookingRoomModal";
 import useAuth from "../../Hooks/useAuth/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const RoomDetailsPage = () => {
     const {user} = useAuth();
@@ -33,7 +34,10 @@ const RoomDetailsPage = () => {
     }
     
     return (
-        <div className="mt-10">     
+        <div className="mt-10">
+            <Helmet>
+                <title>Rove Shelter | Specific Room Details </title>
+            </Helmet>     
             <h1 className="text-center text-5xl font-extrabold "><span className="text-5xl font-extralight">Room ID: </span><span className="text-yellow-600">{room_id}</span></h1>
             <div className="mt-10  grid lg:grid-cols-2 shadow-lg shadow-black rounded-lg">
                 <div className="w-full">

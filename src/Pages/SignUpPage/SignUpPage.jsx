@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
 import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
+import { Helmet } from "react-helmet-async";
 
 const SignUpPage = () => {
 
@@ -69,6 +70,9 @@ const SignUpPage = () => {
   
     return (
         <div className="min-h-screen mt-3">
+            <Helmet>
+                <title>Rove Shelter | Sign Up</title>
+            </Helmet>
 
             <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black md:w-3/4 mx-auto rounded-2xl">
                 <div className="grid place-content-center text-white p-5 lg:h-[620px] bg-blue-900 lg:rounded-l-[300px] lg:border-l-[12px] lg:border-l-orange-600">

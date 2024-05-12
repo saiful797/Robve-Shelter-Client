@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
     return (
         <div className="mt-5 rounded-2xl p-3 bg-[url('https://i.postimg.cc/4dDRcD3x/13.1.jpg')] bg-no-repeat bg-cover text-white">
+            <Helmet>
+                <title>Rove Shelter || About Us</title>
+            </Helmet>
             <h1 className="text-5xl font-bold text-center mb-6">About Us</h1>
             <div className="grid lg:grid-cols-2">
                 <div className="h-full mb-5 lg:mb-0">

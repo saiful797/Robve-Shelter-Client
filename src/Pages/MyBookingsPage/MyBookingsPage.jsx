@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useURL from "../../Hooks/useURL/useURL";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import MyBookingsPageRows from "./MyBookingsPageRows/MyBookingsPageRows";
+import { Helmet } from "react-helmet-async";
 
 const MyBookingsPage = () => {
     const {user} = useAuth();
@@ -21,6 +22,10 @@ const MyBookingsPage = () => {
 
     return (
         <div className="overflow-x-auto mt-10 min-h-[50vh]">
+            <Helmet>
+                <title>Rove Shelter | My Bookings Page </title>
+            </Helmet>
+
             <table className="table">
                 {/* head */}
                 <thead>

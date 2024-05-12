@@ -4,6 +4,7 @@ import useURL from '../../Hooks/useURL/useURL';
 import useAuth from '../../Hooks/useAuth/useAuth';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
 
 const BookingRoomModal = ({id}) => {
     const url = useURL();
@@ -53,6 +54,9 @@ const BookingRoomModal = ({id}) => {
     const {room_id, description, price, room_size, offers} = bookedRoom;
     return (
         <div className='grid md:grid-cols-2 gap-5'>
+            <Helmet>
+                <title>Rove Shelter | Booking Room Modal Page </title>
+            </Helmet>
             <div className='space-y-3 text-justify text-white'>
                 <h1 className='text-3xl font-extralight'>Room ID: <span className='text-xl font-bold '>{room_id}</span></h1>
                 <h2 className='text-3xl font-extralight'>Room Size: <span className='text-xl font-bold '>{room_size}</span></h2>

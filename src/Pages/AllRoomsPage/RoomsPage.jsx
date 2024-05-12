@@ -4,6 +4,7 @@ import useURL from "../../Hooks/useURL/useURL";
 import SpecificRoom from "./SpecificRoom";
 import { FaAngleDown } from "react-icons/fa6";
 import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
+import { Helmet } from "react-helmet-async";
 
 const RoomsPage = () => {
     const [rooms, setRooms] = useState([]);
@@ -27,6 +28,9 @@ const RoomsPage = () => {
 
     return (
         <div className="mt-10 min-h-[43vh]">
+            <Helmet>
+                <title>Rove Shelter | All Rooms Page </title>
+            </Helmet>
             {/* sorted rooms by price */}
             <div className="mb-5 flex justify-center">
                 <div className="dropdown">

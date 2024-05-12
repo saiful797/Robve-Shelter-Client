@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebook, FaHome, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -7,6 +8,9 @@ import { HiOutlineMail } from "react-icons/hi";
 const ContactUsPage = () => {
     return (
         <div className="shadow-2xl shadow-slate-600">
+            <Helmet>
+                <title>Rove Shelter | Contact Us </title>
+            </Helmet>
             <div>
                 <p className="text-4xl font-bold text-center pt-10 mb-5">Contact Rove Shelter Hotels</p>
             </div>
