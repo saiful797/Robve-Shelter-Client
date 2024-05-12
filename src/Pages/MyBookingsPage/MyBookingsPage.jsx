@@ -20,11 +20,11 @@ const MyBookingsPage = () => {
     const allMyBookings = myBookings.filter(myBooking => myBooking.user_email === user.email);
 
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto mt-10">
             <table className="table">
                 {/* head */}
                 <thead>
-                <tr className="text-center">
+                <tr className="text-center text-lg">
                     <th className="border-2">Serial No.</th>
                     <th className="border-2">Room Image</th>
                     <th className="border-2">Room ID</th>

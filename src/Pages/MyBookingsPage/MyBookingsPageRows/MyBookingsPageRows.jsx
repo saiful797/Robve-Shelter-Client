@@ -8,7 +8,7 @@ const MyBookingsPageRows = ({booking, indx}) => {
             <th className="border-2 text-lg">
                 <h1>{indx+1}</h1>
             </th>
-            <td className="border-2">
+            <td className="border-2 text-lg">
                 <div className="flex justify-center items-center gap-3">
                     <div className="avatar">
                         <div className="rounded-xl w-24 h-24">
