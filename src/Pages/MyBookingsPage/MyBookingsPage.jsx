@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import useURL from "../../Hooks/useURL/useURL";
+import useAuth from "../../Hooks/useAuth/useAuth";
+import MyBookingsPageRows from "./MyBookingsPageRows/MyBookingsPageRows";
 
 const MyBookingsPage = () => {
+    const {user} = useAuth();
     const url = useURL();
     const [myBookings, setMyBookings] = useState([]);
 
@@ -14,9 +17,29 @@ const MyBookingsPage = () => {
         })
     },[url]);
 
+    const allMyBookings = myBookings.filter(myBooking => myBooking.user_email === user.email);
+
     return (
-        <div>
-            <h1>Hello from my bookings page: {myBookings.length}</h1>
+        <div className="overflow-x-auto">
+            <table className="table">
+                {/* head */}
+                <thead>
+                <tr className="text-center">
+                    <th className="border-2">Serial No.</th>
+                    <th className="border-2">Room Image</th>
+                    <th className="border-2">Room ID</th>
+                    <th className="border-2">Price(Per Night)</th>
+                    <th className="border-2">Special Offer(s)</th>
+                    <th className="border-2">Actions</th>
+                </tr>
+                </thead>
+                <tbody className="text-center">
+                    {/* row 1 */}
+                    {
+                        allMyBookings.map((booking, indx) => <MyBookingsPageRows key={booking._id} indx={indx} booking={booking}/>)
+                    }
+                </tbody>    
+            </table>
         </div>
     );
 };
