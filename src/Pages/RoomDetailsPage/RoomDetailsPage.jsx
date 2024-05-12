@@ -30,7 +30,7 @@ const RoomDetailsPage = () => {
             <h1 className="text-center text-5xl font-extrabold "><span className="text-5xl font-extralight">Room ID: </span><span className="text-yellow-600">{room_id}</span></h1>
             <div className="mt-10  grid lg:grid-cols-2 shadow-lg shadow-black rounded-lg">
                 <div className="w-full">
-                    <img className="h-full rounded-l-lg" src={image} alt="Tourist spot photo" />
+                    <img className="h-full rounded-l-lg" src={image} alt="Room Image..." />
                 </div>
 
                 <div className="relative">
