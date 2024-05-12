@@ -5,8 +5,10 @@ import useURL from "../../Hooks/useURL/useURL";
 import toast, { Toaster } from "react-hot-toast";
 import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 import BookingRoomModal from "../BookingRoomModal/BookingRoomModal";
+import useAuth from "../../Hooks/useAuth/useAuth";
 
 const RoomDetailsPage = () => {
+    const {user} = useAuth();
     const data = useParams();
     const url = useURL();
     const [specificRoom, setSpecificRoom] = useState({});
@@ -19,9 +21,13 @@ const RoomDetailsPage = () => {
 
     },[url, data.id]);
 
-    const {_id, room_id, description, price, image, offers, availability, room_size } = specificRoom;
+    const {_id, room_id, description, price, image, offers, availability, room_size, user_email } = specificRoom;
 
     const handleUnavailableRoom = () => {
+        if(user.email === user_email){
+            toast.error('You already booked this room!');
+            return;
+        }
         toast.error('Room Unavailable');
         return;
     }
