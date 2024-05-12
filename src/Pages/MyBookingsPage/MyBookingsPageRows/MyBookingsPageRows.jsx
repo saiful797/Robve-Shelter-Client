@@ -14,12 +14,12 @@ const MyBookingsPageRows = ({booking, indx}) => {
 
         Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            text: "You want to cancel this booking!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes!"
           }).then(result => {
             if(result.isConfirmed){
                 fetch(`${url}/rooms/${id}`,{
@@ -32,7 +32,8 @@ const MyBookingsPageRows = ({booking, indx}) => {
                   .then(res => res.json())
                   .then(data => {
                     if(data.modifiedCount > 0){
-                        toast.success('booking Successful!');
+                        toast.success('Booking Cancel Successfully!');
+                        location.reload();
                     }
                   })
             }
