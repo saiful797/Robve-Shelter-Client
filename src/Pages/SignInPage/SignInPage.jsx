@@ -73,7 +73,7 @@ const SignInPage = () => {
                             <SiGithub />
                         </button>
                     </div>
-                    <p className="text-center font-bold text-lg font-Madimi">Or Also</p>
+                    <p className="text-center font-bold text-lg font-Madimi">Or</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control">
                             <label className="label">
