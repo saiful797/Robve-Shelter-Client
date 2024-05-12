@@ -8,9 +8,15 @@ const SpecificRoom = ({room}) => {
             <div className="card w-80 mx-auto shadow-xl relative bg-black">
                 <figure><img src={image} alt="Room image" /></figure>
                 <div className="p-3">
-                    <h2 className="text-lg text-left">
-                        <span className='text-green-700'>Reviews: {reviews}</span>
-                    </h2>
+                    {
+                        reviews === 0 ?<h2 className="text-lg text-left">
+                            <span className='text-green-700'>Reviews: <span className='font-extralight text-white'>Be the first!</span></span>
+                        </h2>
+                        :
+                        <h2 className="text-lg text-left">
+                            <span className='text-green-700'>Reviews: {reviews}</span>
+                        </h2>
+                    }
                     <p className='absolute bottom-5 right-3 text-2xl font-bold text-orange-600'><span className='text-base font-extralight'>per night: </span>${price-1000}</p>
                 </div>
             </div>
