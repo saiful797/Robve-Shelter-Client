@@ -45,7 +45,7 @@ const RoomsPage = () => {
             </div>
             {/* all rooms */}
             <div className="mb-10">
-                <h1 className="text-6xl font-bold text-center">Book Your Room</h1>
+                <h1 className="text-5xl md:text-6xl font-bold text-center">Book Your Room</h1>
             </div>
             <div className="text-center grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {

@@ -71,7 +71,7 @@ const MyBookingsPageRows = ({booking, indx}) => {
                     {/* Reviews Button */}
                     <button className="btn btn-sm btn-outline btn-success tooltip text-xl" data-tip='Add Review'><MdOutlineRateReview /></button>
                     {/* Update Button*/}
-                    <Link to={`/UpdatePage/${_id}`} className="btn btn-sm btn-outline btn-warning tooltip text-xl" data-tip='Update Date'><MdOutlineUpdate /></Link>
+                    <Link to={`/UpdatePage/${_id}`} className="btn btn-sm btn-outline btn-warning tooltip text-xl flex justify-center items-center" data-tip='Update Date'><MdOutlineUpdate /></Link>
                     {/* Cancel Button*/}
                     <button onClick={()=>handleBookingCancel(_id)} className="btn btn-sm btn-outline btn-error tooltip text-xl" data-tip='Cancel Booking'><MdCancel /></button>
                 </div>
