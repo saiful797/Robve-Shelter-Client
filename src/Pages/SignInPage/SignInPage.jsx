@@ -5,6 +5,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast, { Toaster } from "react-hot-toast";
 import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
+import { FcGoogle } from "react-icons/fc";
+import { SiGithub } from "react-icons/si";
+import { TiArrowRightOutline } from "react-icons/ti";
 // import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
@@ -51,22 +54,28 @@ const SignInPage = () => {
 
 
     return (
-        <div className="min-h-screen mt-1">
+        <div className="min-h-screen mt-5">
 
-            <div className="hero-content flex-col">
-                <div className="text-center md:mb-2">
-                    <h1 className="text-5xl mt-5 font-bold">Sign In now!</h1>
+            <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black w-2/3 mx-auto">
+                <div className="grid place-content-center text-white p-5 w-full h-[545px] bg-blue-900 rounded-l-[250px]">
+                    <h1 className="text-7xl text-center mt-5 font-extrabold mb-10">Welcome!</h1>
+                    <p className="text-center">Access exclusive deals and manage bookings hassle-free. Your perfect stay starts here!</p>
                 </div>
-                <div className=" w-full shadow-2xl shadow-black max-w-xl rounded-lg bg-base-100 mt-5 md:mt-0">
-                    <div className="mt-5 p-5 w-full grid gap-5">
-                        <button className="btn w-full" onClick={() => handleSocialMediaSignIn(googleSignIn)}>
-                            Google
+                <div className="p-5 w-full shadow-black max-w-sm rounded-lg bg-base-100 mt-5 md:mt-0">
+                    <h1 className="text-5xl mt-5 font-bold text-center">Sign In Now!</h1>
+                    <div className="mt-3 p-5 w-full flex justify-center items-center gap-5">
+                        <h2 className="flex gap-1 justify-center items-center">With<TiArrowRightOutline />
+</h2>
+                        <button className="btn btn-outline text-4xl btn-circle" onClick={() => handleSocialMediaSignIn(googleSignIn)}>
+                            <FcGoogle />
                         </button>
-                        <button className="btn w-full" onClick={() => handleSocialMediaSignIn(githubSignIn)}>
-                            Github
+
+                        <button className="btn btn-outline text-4xl btn-circle" onClick={() => handleSocialMediaSignIn(githubSignIn)}>
+                            <SiGithub />
                         </button>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                    <p className="text-center font-bold text-lg font-Madimi">Or Also</p>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="text-lg font-medium">Email</span>
@@ -94,7 +103,7 @@ const SignInPage = () => {
                         </div>
                         <div className="flex justify-center gap-5 mt-2">
                             <h1>Do not have an account?</h1>
-                            <Link to="/signUp"><p className="text-sky-400 font-bold hover:text-black link link-hover">Sign Up</p></Link>
+                            <Link to="/signUp"><p className="text-orange-500 font-bold hover:text-black link link-hover">Sign Up</p></Link>
                         </div>
                     </form>
                 </div>
