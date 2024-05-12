@@ -20,7 +20,7 @@ const MyBookingsPage = () => {
     const allMyBookings = myBookings.filter(myBooking => myBooking.user_email === user.email);
 
     return (
-        <div className="overflow-x-auto mt-10">
+        <div className="overflow-x-auto mt-10 min-h-[50vh]">
             <table className="table">
                 {/* head */}
                 <thead>
