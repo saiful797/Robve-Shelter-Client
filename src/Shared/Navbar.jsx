@@ -32,7 +32,7 @@ const Navbar = () => {
         <li className=" font-medium"><NavLink to="/rooms">All Rooms</NavLink></li> 
         {
             user?<div>
-                <li className=" font-medium"><NavLink to="/myList">My List</NavLink></li>
+                <li className=" font-medium"><NavLink to="/myBookings">My Bookings</NavLink></li>
             </div>
              : 
             <div>

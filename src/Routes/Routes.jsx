@@ -44,7 +44,7 @@ const router = createBrowserRouter([
           element: <SignInPage />
         },
         {
-          path: '/myList',
+          path: '/myBookings',
           element: <PrivateRoute>
             <MyListPage />
           </PrivateRoute>
