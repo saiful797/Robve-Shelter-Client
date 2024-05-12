@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { MdCancel, MdOutlineRateReview } from 'react-icons/md';
+import { MdCancel, MdOutlineRateReview, MdOutlineUpdate } from 'react-icons/md';
 
 const MyBookingsPageRows = ({booking, indx}) => {
 
@@ -30,6 +30,7 @@ const MyBookingsPageRows = ({booking, indx}) => {
             <th className="border-2 text-lg">
                 <div className='flex justify-center items-center gap-3'>
                     <button className="btn btn-sm btn-outline btn-success tooltip text-xl" data-tip='Add Review'><MdOutlineRateReview /></button>
+                    <button className="btn btn-sm btn-outline btn-warning tooltip text-xl" data-tip='Update Date'><MdOutlineUpdate /></button>
                     <button className="btn btn-sm btn-outline btn-error tooltip text-xl" data-tip='Cancle Booking'><MdCancel /></button>
                 </div>
             </th>
