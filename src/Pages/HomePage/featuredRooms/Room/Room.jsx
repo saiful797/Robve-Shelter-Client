@@ -36,15 +36,15 @@ const Room = ({room}) => {
                     {
                         user?<div className='w-full'>
                             <button className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium" onClick={()=>document.getElementById('my_modal_4').showModal()}>Book Now</button>
-                            <dialog id="my_modal_4" className="modal text-black">
-                                <div className="modal-box w-11/12 max-w-5xl">
+                            <dialog id="my_modal_4" className="modal">
+                                <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-r from-[#584D3C] to-[#9F956C] ">
                                     
                                     <BookingRoomModal id={_id}/>
 
                                     <div className="modal-action">
                                     <form method="dialog">
                                         {/* if there is a button, it will close the modal */}
-                                        <button className="btn">Close</button>
+                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
                                     </div>
                                 </div>

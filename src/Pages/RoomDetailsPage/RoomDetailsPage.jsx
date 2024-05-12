@@ -58,14 +58,14 @@ const RoomDetailsPage = () => {
                             <div>
                                 <button className="w-full rounded-none border-black btn-outline btn bg-black text-2xl font-medium text-white rounded-br-lg" onClick={()=>document.getElementById('my_modal_4').showModal()}>Book Now</button>
                                 <dialog id="my_modal_4" className="modal text-black">
-                                    <div className="modal-box w-11/12 max-w-5xl">
+                                    <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-r from-[#584D3C] to-[#9F956C] ">
                                         
                                         <BookingRoomModal id={_id}/>
 
                                         <div className="modal-action">
                                         <form method="dialog">
                                             {/* if there is a button, it will close the modal */}
-                                            <button className="btn">Close</button>
+                                            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                         </form>
                                         </div>
                                     </div>
