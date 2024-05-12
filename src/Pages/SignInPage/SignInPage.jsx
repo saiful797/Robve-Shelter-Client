@@ -56,7 +56,7 @@ const SignInPage = () => {
     return (
         <div className="min-h-screen mt-5">
 
-            <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black w-2/3 mx-auto">
+            <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black w-2/3 mx-auto rounded-2xl">
                 <div className="grid place-content-center text-white p-5 w-full h-[545px] bg-blue-900 rounded-l-[250px]">
                     <h1 className="text-7xl text-center mt-5 font-extrabold mb-10">Welcome!</h1>
                     <p className="text-center">Access exclusive deals and manage bookings hassle-free. Your perfect stay starts here!</p>
