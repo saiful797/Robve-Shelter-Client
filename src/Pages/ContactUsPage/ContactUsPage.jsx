@@ -12,18 +12,16 @@ const ContactUsPage = () => {
             </div>
             <div className="grid md:grid-cols-2 p-5">
                 <div className="grid place-content-center space-y-5 text-2xl font-medium">
-                    <h1 className="flex gap-2">
-                        Address Details
-                    </h1>
-                    <h2 className="flex gap-2">
+                    <h1>Address Details</h1>
+                    <h2 className="flex items-center gap-2">
                         <FaHome />
                         40 E 7th St, New York, NY 10003, USA
                     </h2>
-                    <h3 className="flex gap-2">
+                    <h3 className="flex items-center gap-2">
                         <FiPhoneCall />
                         +12086034384
                     </h3>
-                    <h3 className="flex gap-2">
+                    <h3 className="flex items-center gap-2">
                         <HiOutlineMail />
                         roveshelter1213@gmail.com
                     </h3>
