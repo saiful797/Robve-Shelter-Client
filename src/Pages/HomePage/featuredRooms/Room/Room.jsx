@@ -2,17 +2,12 @@ import PropTypes from 'prop-types';
 import './Room.css'
 import BookingRoomModal from '../../../BookingRoomModal/BookingRoomModal';
 import useAuth from '../../../../Hooks/useAuth/useAuth';
-import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const Room = ({room}) => {
 
     const {user} = useAuth();
     const {_id, image, room_id, room_size, availability, price, description} = room;
-
-    const handleBookNowButton = () => {
-        toast.error('SignIn First!!, Get Access Booking!');
-        return;
-    }
     return (
         <div className="card w-[350px] h-[650px] bg-blue-950 mx-auto">
             <figure><img className='h-72 w-full rounded-b-[60px] border-b-4 border-orange-500' src={image} alt="room image"/></figure>
@@ -30,9 +25,6 @@ const Room = ({room}) => {
                 <h3 className='truncate-3-lines text-justify'><span className="text-2xl font-bold text-stone-400">Description: </span>  {description}</h3>
             
                 <div className="card-actions justify-end absolute      bottom-2 w-4/5">
-                    {/* <button className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium">Book Now</button> */}
-
-                    {/* You can open the modal using document.getElementById('ID').showModal() method */}
                     {
                         user?<div className='w-full'>
                             <button className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium" onClick={()=>document.getElementById('my_modal_4').showModal()}>Book Now</button>
@@ -51,7 +43,9 @@ const Room = ({room}) => {
                             </dialog>
                         </div>
                         :
-                        <button onClick={handleBookNowButton} className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium">Book Now</button>
+                        <Link to='/signIn' className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium">
+                           Book Now
+                        </Link>
                     }
                 </div>
             </div>
