@@ -40,7 +40,8 @@ const Navbar = () => {
                 <li className="md:hidden"><NavLink to="/signUp">Sign up</NavLink></li>
             </div>
         }
-        <li className=" font-medium"><NavLink to="/about">About Us</NavLink></li> 
+        <li className=" font-medium"><NavLink to="/about">About Us</NavLink></li>
+        <li className=" font-medium"><NavLink to="/contactUs">Contact Us</NavLink></li>
             
     </>
 
