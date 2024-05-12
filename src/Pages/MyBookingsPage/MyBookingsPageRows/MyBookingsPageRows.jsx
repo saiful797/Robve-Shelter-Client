@@ -1,9 +1,29 @@
 import PropTypes from 'prop-types';
 import { MdCancel, MdOutlineRateReview, MdOutlineUpdate } from 'react-icons/md';
+import useURL from '../../../Hooks/useURL/useURL';
 
 const MyBookingsPageRows = ({booking, indx}) => {
+    const url = useURL();
 
-    const {room_id, price, image, offers} = booking;
+    const {_id, room_id, price, image, offers} = booking;
+
+    const handleBookingCancel =(id) => {
+        const cancleDetails = {date: "", availability: true, user_email:""}
+        fetch(`${url}/rooms/${id}`,{
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(bookingDetails),
+        })
+          .then(res => res.json())
+          .then(data => {
+            if(data.modifiedCount > 0){
+                toast.success('booking Successful!');
+                reset();
+            }
+          })
+    }
     return (
         <tr>
             <th className="border-2 text-lg">
@@ -31,7 +51,7 @@ const MyBookingsPageRows = ({booking, indx}) => {
                 <div className='flex justify-center items-center gap-3'>
                     <button className="btn btn-sm btn-outline btn-success tooltip text-xl" data-tip='Add Review'><MdOutlineRateReview /></button>
                     <button className="btn btn-sm btn-outline btn-warning tooltip text-xl" data-tip='Update Date'><MdOutlineUpdate /></button>
-                    <button className="btn btn-sm btn-outline btn-error tooltip text-xl" data-tip='Cancle Booking'><MdCancel /></button>
+                    <button onClick={()=>handleBookingCancel(_id)} className="btn btn-sm btn-outline btn-error tooltip text-xl" data-tip='Cancel Booking'><MdCancel /></button>
                 </div>
             </th>
         </tr>
