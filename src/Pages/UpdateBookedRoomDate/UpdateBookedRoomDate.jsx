@@ -29,8 +29,6 @@ const UpdateBookedRoomDate = () => {
         // console.log(date);
         const bookingDetails = {date, user_email: user.email, availability: false}
         // console.log(bookingDetails);
-
-        // console.log(`${url}/rooms/${id}`);
         fetch(`${url}/rooms/${id}`,{
             method: 'PUT',
             headers:{
@@ -41,14 +39,13 @@ const UpdateBookedRoomDate = () => {
           .then(res => res.json())
           .then(data => {
             if(data.modifiedCount > 0){
-                toast.success('booking Successful!');
+                toast.success('Booking Date Updated Successfully!');
                 reset();
             }
           })
-        
     }
 
-    const {room_id, description, price, room_size, offers} = bookedRoom;
+    const {room_id, description, price, room_size, offers, date} = bookedRoom;
 
     return (
         <div className='grid md:grid-cols-2 gap-5 p-5 text-white bg-stone-600 rounded-2xl mt-10'>
@@ -58,6 +55,7 @@ const UpdateBookedRoomDate = () => {
             <div className='space-y-3 text-justify '>
                 <h1 className='text-3xl font-extralight'>Room ID: <span className='text-xl font-bold '>{room_id}</span></h1>
                 <h2 className='text-3xl font-extralight'>Room Size: <span className='text-xl font-bold '>{room_size}</span></h2>
+                <h2 className='text-3xl font-extralight'>Previous Date: <span className='text-xl font-bold '>{date}</span></h2>
                 <h3 className='text-3xl font-extralight'>Price: <span className='text-xl font-bold '>${price-1000}</span></h3>
                 <h4 className='text-3xl font-extralight'>Special Offer(s): <span className='text-xl font-bold '>{offers}</span></h4>
                 <p className='text-3xl font-thin '>Description: <span className='text-xl'>{description}</span></p>

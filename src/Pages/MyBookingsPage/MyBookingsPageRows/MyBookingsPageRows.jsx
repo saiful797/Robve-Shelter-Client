@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const MyBookingsPageRows = ({booking, indx}) => {
     const url = useURL();
 
-    const {_id, room_id, price, image, offers} = booking;
+    const {_id, room_id, price, image, offers, date} = booking;
 
     const handleBookingCancel =(id) => {
         const cancelDetails = {date: "", availability: true, user_email:""};
@@ -58,7 +58,10 @@ const MyBookingsPageRows = ({booking, indx}) => {
                 {room_id}
             </td>
             <td className="border-2 text-lg">
-               ${price-1000}
+               {date}
+            </td>
+            <td className="border-2 text-lg">
+               ${price-100}0
             </td>
             <td className="border-2 text-lg">
                 {offers}

@@ -33,6 +33,7 @@ const MyBookingsPage = () => {
                     <th className="border-2">Serial No.</th>
                     <th className="border-2">Room Image</th>
                     <th className="border-2">Room ID</th>
+                    <th className="border-2">Booking Date</th>
                     <th className="border-2">Price(Per Night)</th>
                     <th className="border-2">Special Offer(s)</th>
                     <th className="border-2">Actions</th>
