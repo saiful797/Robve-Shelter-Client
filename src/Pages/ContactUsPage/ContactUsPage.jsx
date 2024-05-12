@@ -25,7 +25,7 @@ const ContactUsPage = () => {
                         <HiOutlineMail />
                         roveshelter1213@gmail.com
                     </h3>
-                    <h2 className="font-extralight">Join Us With Social Media</h2>
+                    <h2 className="font-extralight">Join With Us Social Media</h2>
                     <div className="flex gap-3">
                         <FaFacebook />
                         <FaXTwitter />
