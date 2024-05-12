@@ -1,12 +1,17 @@
 import PropTypes from 'prop-types';
 import './Room.css'
+import BookingRoomModal from '../../../BookingRoomModal/BookingRoomModal';
+import useAuth from '../../../../Hooks/useAuth/useAuth';
+import toast from 'react-hot-toast';
 
 const Room = ({room}) => {
+
+    const {user} = useAuth();
     const {_id, image, room_id, room_size, availability, price, description} = room;
 
-    const handleBooking = (id) =>{
-    //    console.log('ID: ', id)
-    alert(`{ID: ${id}}`)
+    const handleBookNowButton = () => {
+        toast.error('SignIn First!!, Get Access Booking!');
+        return;
     }
     return (
         <div className="card w-[350px] h-[650px] bg-blue-950 mx-auto">
@@ -23,8 +28,31 @@ const Room = ({room}) => {
                 }
                 <h2  className="text-xl font-extralight">Price(Per Night): <span className='text-2xl font-medium'>${price-1000}</span></h2>
                 <h3 className='truncate-3-lines text-justify'><span className="text-2xl font-bold text-stone-400">Description: </span>  {description}</h3>
-                <div className="card-actions justify-end absolute bottom-2 w-4/5">
-                    <button onClick={()=> handleBooking (_id)} className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium">Book Now</button>
+            
+                <div className="card-actions justify-end absolute      bottom-2 w-4/5">
+                    {/* <button className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium">Book Now</button> */}
+
+                    {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                    {
+                        user?<div className='w-full'>
+                            <button className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium" onClick={()=>document.getElementById('my_modal_4').showModal()}>Book Now</button>
+                            <dialog id="my_modal_4" className="modal text-black">
+                                <div className="modal-box w-11/12 max-w-5xl">
+                                    
+                                    <BookingRoomModal id={_id}/>
+
+                                    <div className="modal-action">
+                                    <form method="dialog">
+                                        {/* if there is a button, it will close the modal */}
+                                        <button className="btn">Close</button>
+                                    </form>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </div>
+                        :
+                        <button onClick={handleBookNowButton} className="btn btn-ghost rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none w-full hover:from-black hover:to-black text-xl font-medium">Book Now</button>
+                    }
                 </div>
             </div>
         </div>
@@ -33,5 +61,6 @@ const Room = ({room}) => {
 
 Room.propTypes ={
     room: PropTypes.object,
+    id: PropTypes.string,
 }
 export default Room;

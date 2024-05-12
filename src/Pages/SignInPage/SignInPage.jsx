@@ -17,11 +17,11 @@ const SignInPage = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    console.log(location);
+    // console.log(location);
 
     const onSubmit = (data) => {
         const {email, password} = data;
-        console.log(data);
+        // console.log(data);
         signInUser(email, password).then(result => {
             if(result.user){
                 toast.success('User logged In Successfully!');

@@ -17,7 +17,7 @@ const SignUpPage = () => {
     const {register ,reset , handleSubmit} = useForm();
 
     const onSubmit = (data) =>{
-        console.log(data);
+        // console.log(data);
         const {name, email, password, imageURL } = data;
 
         if(password.length < 6){

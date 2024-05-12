@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import useURL from "../../Hooks/useURL/useURL";
 import toast, { Toaster } from "react-hot-toast";
 import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
+import BookingRoomModal from "../BookingRoomModal/BookingRoomModal";
 
 const RoomDetailsPage = () => {
     const data = useParams();
@@ -18,7 +19,7 @@ const RoomDetailsPage = () => {
 
     },[url, data.id]);
 
-    const { room_id, description, price, image, offers, availability, room_size } = specificRoom;
+    const {_id, room_id, description, price, image, offers, availability, room_size } = specificRoom;
 
     const handleUnavailableRoom = () => {
         toast.error('Room Unavailable');
@@ -53,7 +54,23 @@ const RoomDetailsPage = () => {
                     </div>
                     <div className="w-full absolute bottom-0 left-0">
                         {
-                            availability === true?<button className="w-full rounded-none border-black btn-outline btn bg-black text-2xl font-medium text-white rounded-br-lg"> Book Now </button>
+                            availability === true? // <button className="w-full rounded-none border-black btn-outline btn bg-black text-2xl font-medium text-white rounded-br-lg"> Book Now </button>
+                            <div>
+                                <button className="w-full rounded-none border-black btn-outline btn bg-black text-2xl font-medium text-white rounded-br-lg" onClick={()=>document.getElementById('my_modal_4').showModal()}>Book Now</button>
+                                <dialog id="my_modal_4" className="modal text-black">
+                                    <div className="modal-box w-11/12 max-w-5xl">
+                                        
+                                        <BookingRoomModal id={_id}/>
+
+                                        <div className="modal-action">
+                                        <form method="dialog">
+                                            {/* if there is a button, it will close the modal */}
+                                            <button className="btn">Close</button>
+                                        </form>
+                                        </div>
+                                    </div>
+                                </dialog>
+                            </div>
                             :
                             <button onClick={handleUnavailableRoom} className="w-full rounded-none border-black btn-outline btn bg-black text-2xl font-medium text-white rounded-br-lg"> Book Now </button>
                         } 
