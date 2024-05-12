@@ -11,7 +11,7 @@ const ContactUsPage = () => {
                 <p className="text-4xl font-bold text-center pt-10 mb-5">Contact Rove Shelter Hotels</p>
             </div>
             <div className="grid md:grid-cols-2 p-5">
-                <div className="grid place-content-center space-y-5 text-2xl font-bold">
+                <div className="grid place-content-center space-y-5 text-2xl font-medium">
                     <h1 className="flex gap-2">
                         Address Details
                     </h1>
