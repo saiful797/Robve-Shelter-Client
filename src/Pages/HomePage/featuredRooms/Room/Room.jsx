@@ -36,7 +36,7 @@ const Room = ({room}) => {
                                     <div className="modal-action">
                                     <form method="dialog">
                                         {/* if there is a button, it will close the modal */}
-                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        <Link to='/myBookings' className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</Link>
                                     </form>
                                     </div>
                                 </div>

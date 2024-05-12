@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useURL from "../../Hooks/useURL/useURL";
 import toast, { Toaster } from "react-hot-toast";
 import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
@@ -65,7 +65,7 @@ const RoomDetailsPage = () => {
                                         <div className="modal-action">
                                         <form method="dialog">
                                             {/* if there is a button, it will close the modal */}
-                                            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                            <Link to="/myBookings" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</Link>
                                         </form>
                                         </div>
                                     </div>
