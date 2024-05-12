@@ -1,8 +1,21 @@
-# React + Vite
+# Assignment_ID: assignment_category_0004
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Website Name: Rove Shelter
 
-Currently, two official plugins are available:
+- Website Live Link: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Website Features:
+1. Modern, user-centric hotel booking platform offering seamless functionality across devices.
+
+2. Frontend and backend systems designed and implemented for enhanced user experience.
+
+3. Utilization of cutting-edge technologies including React.js, Node.js, Express.js, and MongoDB.
+
+4. Integration of Firebase authentication and JWT token implementation for secure user access.
+
+5. Implementation of responsive design for mobile, tablet, and desktop views.
+
+6. Notable features include a visually engaging homepage, user authentication, room listings with filtering options, and booking management.
+
+7. Special emphasis on user reviews, special offers promotion, booking cancellation policies, and JWT token authentication for private routes.
+
