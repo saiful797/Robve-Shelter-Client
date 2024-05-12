@@ -8,7 +8,7 @@ const ContactUsPage = () => {
     return (
         <div className="shadow-2xl shadow-slate-600">
             <div>
-                <p className="text-4xl font-bold text-center mt-5 mb-5">Contact Rove Shelter Hotels</p>
+                <p className="text-4xl font-bold text-center pt-10 mb-5">Contact Rove Shelter Hotels</p>
             </div>
             <div className="grid md:grid-cols-2 p-5">
                 <div className="grid place-content-center space-y-5 text-2xl font-bold">
