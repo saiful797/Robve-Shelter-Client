@@ -38,7 +38,7 @@ const ContactUsPage = () => {
                 </div>
                 <div>
                     <div className="text-center">
-                        <h2>Contact Us!</h2>
+                        <h2 className="text-3xl font-bold">Contact Us!</h2>
                         <p>We can not solve your problem if you do not tell us about it!</p>
                     </div>
                     <form className="card-body">
