@@ -3,8 +3,16 @@ import ScrollToTop from "../../../Shared/ScrollToTop/ScrollToTop";
 import NewsLetterSubscribe from "../NewsLetterSubscrib/NewsLetterSubscribe";
 import Slider from "../Slider/Slider";
 import FeaturedRooms from "../featuredRooms/FeaturedRooms";
+import OffersModal from "../OffersModal/OffersModal";
+import { useState } from "react";
 
 const Home = () => {
+    const [showPopup, setShowPopup] = useState(true);
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+    };
+
     return (
         <div className="mt-5">
             <Helmet>
@@ -13,6 +21,12 @@ const Home = () => {
 
             {/* Slider */}
             <Slider />
+
+            <div className="relative">
+                {/* Home page content */}
+                {showPopup && <OffersModal onClose={handleClosePopup} />}
+            </div>
+            
             <h1 className="text-6xl font-bold text-center mt-10 mb-5">
                     Featured Rooms
                 </h1>
