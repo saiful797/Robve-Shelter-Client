@@ -36,8 +36,8 @@ const ContactUsPage = () => {
                         <FaLinkedin />
                     </div>
                 </div>
-                <div>
-                    <div className="text-center">
+                <div className="bg-lime-100 rounded-lg">
+                    <div className="text-center mt-5">
                         <h2 className="text-3xl font-bold">Contact Us!</h2>
                         <p>We can not solve your problem if you do not tell us about it!</p>
                     </div>
