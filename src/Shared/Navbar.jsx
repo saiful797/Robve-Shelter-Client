@@ -121,8 +121,8 @@ const Navbar = () => {
                 </div>
                 :
                 <div className="space-x-3 hidden md:flex mr-3">
-                    <Link className="btn btn-sm bg-gradient-to-r from-indigo-500 text-lg text-rose-500" to="/signIn">Sign In</Link>
-                    <Link className="btn btn-sm bg-gradient-to-r from-purple-500 text-lg text-rose-500" to="/signUp">Sign Up</Link>
+                    <Link className="btn btn-sm" to="/signIn">Sign In</Link>
+                    <Link className="btn btn-sm" to="/signUp">Sign Up</Link>
                 </div>
             }
         </div>
