@@ -70,13 +70,13 @@ const SignUpPage = () => {
     return (
         <div className="min-h-screen mt-3">
 
-            <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black w-3/4 mx-auto rounded-2xl">
-                <div className="grid place-content-center text-white p-5 w-full h-[620px] bg-blue-900 rounded-l-[300px]">
-                    <h1 className="text-5xl text-center mt-5 font-extrabold mb-10">Welcome!</h1>
+            <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black md:w-3/4 mx-auto rounded-2xl">
+                <div className="grid place-content-center text-white p-5 lg:h-[620px] bg-blue-900 lg:rounded-l-[300px] lg:border-l-[12px] lg:border-l-orange-600">
+                    <h1 className="text-3xl md:text-5xl text-center mt-5 font-bold mb-10">Welcome!</h1>
                     <p className="text-center">Access exclusive deals and manage bookings hassle-free. Your perfect stay starts here!</p>
                 </div>
-                <div className="p-5 w-full shadow-black max-w-lg rounded-lg bg-base-100 mt-5 md:mt-0">
-                    <h1 className="text-4xl mt-5 font-bold text-center">Create an Account</h1>
+                <div className="p-5 w-full shadow-black max-w-lg rounded-lg bg-base-100 ">
+                    <h1 className="text-2xl md:text-4xl mt-5 font-bold text-center">Create an Account</h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
