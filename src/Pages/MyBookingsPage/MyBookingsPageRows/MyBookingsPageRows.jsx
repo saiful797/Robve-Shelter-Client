@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { MdCancel, MdOutlineRateReview, MdOutlineUpdate } from 'react-icons/md';
 import useURL from '../../../Hooks/useURL/useURL';
+import Swal from "sweetalert2";
+import toast from 'react-hot-toast';
 
 const MyBookingsPageRows = ({booking, indx}) => {
     const url = useURL();
@@ -8,19 +10,31 @@ const MyBookingsPageRows = ({booking, indx}) => {
     const {_id, room_id, price, image, offers} = booking;
 
     const handleBookingCancel =(id) => {
-        const cancleDetails = {date: "", availability: true, user_email:""}
-        fetch(`${url}/rooms/${id}`,{
-            method: 'PUT',
-            headers:{
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(bookingDetails),
-        })
-          .then(res => res.json())
-          .then(data => {
-            if(data.modifiedCount > 0){
-                toast.success('booking Successful!');
-                reset();
+        const cancelDetails = {date: "", availability: true, user_email:""};
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then(result => {
+            if(result.isConfirmed){
+                fetch(`${url}/rooms/${id}`,{
+                    method: 'PUT',
+                    headers:{
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(cancelDetails),
+                })
+                  .then(res => res.json())
+                  .then(data => {
+                    if(data.modifiedCount > 0){
+                        toast.success('booking Successful!');
+                    }
+                  })
             }
           })
     }
