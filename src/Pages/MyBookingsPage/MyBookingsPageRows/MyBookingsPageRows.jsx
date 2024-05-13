@@ -69,7 +69,7 @@ const MyBookingsPageRows = ({booking, indx}) => {
             <th className="border-2 text-lg">
                 <div className='flex justify-center items-center gap-3'>
                     {/* Reviews Button */}
-                    <button className="btn btn-sm btn-outline btn-success tooltip text-xl" data-tip='Add Review'><MdOutlineRateReview /></button>
+                    <Link to={`/addReviews/${_id}`} className="btn btn-sm btn-outline btn-success tooltip text-xl" data-tip='Add Review'><MdOutlineRateReview /></Link>
                     {/* Update Button*/}
                     <Link to={`/UpdatePage/${_id}`} className="btn btn-sm btn-outline btn-warning tooltip text-xl flex justify-center items-center" data-tip='Update Date'><MdOutlineUpdate /></Link>
                     {/* Cancel Button*/}

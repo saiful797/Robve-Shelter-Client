@@ -11,6 +11,7 @@ import PrivateRoute from "../Private/PrivateRoute";
 import ContactUsPage from "../Pages/ContactUsPage/ContactUsPage";
 import MyBookingsPage from "../Pages/MyBookingsPage/MyBookingsPage";
 import UpdateBookedRoomDate from "../Pages/UpdateBookedRoomDate/UpdateBookedRoomDate";
+import AddReviewsPage from "../Pages/AddReviewsPage/AddReviewsPage";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
           path: '/myBookings',
           element:<PrivateRoute>
             <MyBookingsPage />
+          </PrivateRoute>
+        },
+        {
+          path: '/addReviews/:id',
+          element: <PrivateRoute>
+            <AddReviewsPage />
           </PrivateRoute>
         },
         {

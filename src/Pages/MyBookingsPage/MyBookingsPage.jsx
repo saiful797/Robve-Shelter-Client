@@ -14,7 +14,7 @@ const MyBookingsPage = () => {
         axios.get(`${url}/myBookings`)
         .then(res => {
             setMyBookings(res.data);
-            console.log(res.data);
+            // console.log(res.data);
         })
     },[url]);
 
