@@ -12,10 +12,10 @@ const ContactUsPage = () => {
                 <title>Rove Shelter | Contact Us </title>
             </Helmet>
             <div>
-                <p className="text-4xl font-bold text-center pt-10 mb-5">Contact Rove Shelter Hotels</p>
+                <p className="text-2xl md:text-4xl font-bold text-center pt-10 mb-5">Contact Rove Shelter Hotels</p>
             </div>
             <div className="grid md:grid-cols-2 p-5">
-                <div className="grid place-content-center space-y-5 text-2xl font-medium">
+                <div className="grid place-content-center space-y-5 md:text-2xl font-medium">
                     <h1>Address Details</h1>
                     <h2 className="flex items-center gap-2">
                         <FaHome />
@@ -38,9 +38,9 @@ const ContactUsPage = () => {
                         <FaLinkedin />
                     </div>
                 </div>
-                <div className="bg-lime-100 rounded-lg">
+                <div className="bg-zinc-200 rounded-lg mt-10 md:mt-0">
                     <div className="text-center mt-5">
-                        <h2 className="text-3xl font-bold">Contact Us!</h2>
+                        <h2 className="text-3xl font-bold mb-5">Contact Us!</h2>
                         <p>We can not solve your problem if you do not tell us about it!</p>
                     </div>
                     <form className="card-body">
