@@ -1,6 +1,7 @@
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -14,10 +15,17 @@ const Footer = () => {
                 </aside> 
                 <nav className="mx-auto">
                     <h6 className="footer footer-title text-xl footer-center">Services</h6> 
-                    <a className="link link-hover">Travel Packages</a>
-                    <a className="link link-hover">Travel Blog </a>
-                    <a className="link link-hover">Activities and Tours</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <a className="link link-hover mx-auto">Travel Packages</a>
+                    <a className="link link-hover mx-auto">Travel Blog </a>
+                    <a className="link link-hover mx-auto">Activities and Tours</a>
+                    <a className="link link-hover mx-auto">Advertisement</a>
+                </nav> 
+                <nav className="mx-auto">
+                    <h6 className="footer footer-title text-xl footer-center">Scan QR Code</h6> 
+                    <a className="link link-hover mx-auto">Visit Our Tourism Website</a>
+                    <Link className="mx-auto"> 
+                       <img className="w-32" src="https://i.postimg.cc/X73Cgww8/explore-southeast-asia.png" alt="QR Code Image..." />
+                    </Link>
                 </nav> 
                 <nav className="mx-auto">
                     <h6 className="footer footer-title text-xl footer-center">Contact Us</h6> 
