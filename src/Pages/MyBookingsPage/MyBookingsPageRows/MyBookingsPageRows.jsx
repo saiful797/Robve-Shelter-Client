@@ -61,7 +61,7 @@ const MyBookingsPageRows = ({booking, indx}) => {
                {date}
             </td>
             <td className="border-2 text-lg">
-               ${price-100}0
+               ${price-1000}
             </td>
             <td className="border-2 text-lg">
                 {offers}
