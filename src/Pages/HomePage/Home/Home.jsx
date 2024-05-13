@@ -27,7 +27,7 @@ const Home = () => {
                 {showPopup && <OffersModal onClose={handleClosePopup} />}
             </div>
             
-            <h1 className="text-6xl font-bold text-center mt-10 mb-5">
+            <h1 className="text-4xl md:text-6xl font-bold text-center mt-10 mb-5">
                     Featured Rooms
                 </h1>
             <div className=" mx-auto bg-slate-400 pt-5 pb-5 rounded-3xl">
@@ -39,7 +39,7 @@ const Home = () => {
             </div>
 
             <div className="w-full mt-10">
-                <h1 className="text-5xl font-bold text-center mb-5">Our Hotels Locations</h1>
+                <h1 className="text-3xl md:text-5xl font-bold text-center mb-5">Our Hotels Locations</h1>
                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=18BVm-G5RPqI1t2fkL31jL12NfxxJAO0&ehbc=2E312F&noprof=1"
                 className="w-full h-[400px]"></iframe>
             </div>
