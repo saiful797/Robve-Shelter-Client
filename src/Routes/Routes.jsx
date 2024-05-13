@@ -34,7 +34,9 @@ const router = createBrowserRouter([
         },
         {
           path: '/UpdatePage/:id',
-          element:<UpdateBookedRoomDate />
+          element:<PrivateRoute>
+            <UpdateBookedRoomDate />
+          </PrivateRoute>
         },
         {
           path: '/about',
