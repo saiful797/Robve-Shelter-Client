@@ -9,10 +9,13 @@ import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
 import { TiArrowRightOutline } from "react-icons/ti";
 import { Helmet } from "react-helmet-async";
+import axios from "axios";
+import useURL from "../../Hooks/useURL/useURL";
 // import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
 const SignInPage = () => {
+    const url = useURL();
     const {signInUser, googleSignIn,githubSignIn} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const {register, reset, handleSubmit} = useForm();
@@ -30,9 +33,15 @@ const SignInPage = () => {
             if(result.user){
                 toast.success('User logged In Successfully!');
             }
+            // console.log(result.user);
+            // navigate(location?.state? location?.state : '/');
 
-            navigate(location?.state? location?.state : '/');
-            
+            const user ={ email: result.user.email };
+            // get access token
+            axios.post(`${url}/jwt`, user)
+            .then(res => {
+                console.log(res);
+            }) 
             reset();
         })
         .catch(error => {
@@ -45,12 +54,12 @@ const SignInPage = () => {
 
     const handleSocialMediaSignIn = (socialMediaProvider) =>{
         socialMediaProvider()
-         .then(data =>{
+        .then(data =>{
             if(data.user){
                 toast.success('You Login Successfully!');
                 navigate(location?.state || '/');
             }
-         })
+        })
     }
 
     return (
@@ -59,7 +68,7 @@ const SignInPage = () => {
                 <title>Rove Shelter | Sign In </title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse shadow-sm shadow-black md:w-2/3 mx-auto rounded-2xl">
-                <div className="grid place-content-center text-white p-5 lg:h-[545px] lg:border-l-[12px] lg:border-l-orange-600 bg-blue-900 lg:rounded-l-[260px]">
+                <div className="grid place-content-center text-white p-5 lg:h-[545px] lg:border-l-[12px] lg:border-l-orange-600 bg-blue-900 lg:rounded-l-[270px]">
                     <h1 className="text-2xl md:text-5xl text-center mt-5 font-extrabold mb-10">Welcome!</h1>
                     <p className="text-center">Access exclusive deals and manage bookings hassle-free. Your perfect stay starts here!</p>
                 </div>

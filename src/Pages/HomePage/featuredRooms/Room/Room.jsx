@@ -3,13 +3,19 @@ import './Room.css'
 import BookingRoomModal from '../../../BookingRoomModal/BookingRoomModal';
 import useAuth from '../../../../Hooks/useAuth/useAuth';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Room = ({room}) => {
+    useEffect(() =>{
+        AOS.init();
+    }, [])
 
     const {user} = useAuth();
     const {_id, image, room_id, room_size, availability, price, description} = room;
     return (
-        <div className="card w-[350px] h-[650px] bg-blue-950 mx-auto">
+        <div className="card w-[350px] h-[650px] bg-blue-950 mx-auto" data-aos="fade-right">
             <figure><img className='h-72 w-full rounded-b-[60px] border-b-4 border-orange-500' src={image} alt="room image"/></figure>
             <div className="card-body text-white relative">
                 {/* <p className='text-white'>{description}</p> */}
