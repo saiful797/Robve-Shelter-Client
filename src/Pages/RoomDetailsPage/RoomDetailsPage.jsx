@@ -7,12 +7,25 @@ import ScrollToTop from "../../Shared/ScrollToTop/ScrollToTop";
 import BookingRoomModal from "../BookingRoomModal/BookingRoomModal";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import { Helmet } from "react-helmet-async";
+import SpecificReview from "../HomePage/UserReviews/SpecificReview";
 
 const RoomDetailsPage = () => {
     const {user} = useAuth();
     const data = useParams();
+    const id = data.id;
     const url = useURL();
     const [specificRoom, setSpecificRoom] = useState({});
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        axios.get(`${url}/reviews`)
+        .then(res => {
+            setReviews(res.data);
+        })
+    },[url]);
+
+    const allReviews = reviews.filter(review => review.specificRoom_id === id)
 
     useEffect(() => {
         axios.get(`${url}/specificRoom/${data.id}`)
@@ -88,13 +101,17 @@ const RoomDetailsPage = () => {
                 </div>
             </div>
 
-            {/* <div>
-                <h1 className="">User Reviews</h1>
-            </div> */}
+            <p className="mt-10 text-6xl font-bold text-center">User Reviews</p> 
+            <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3"> 
+                {
+                    allReviews.map(review => <SpecificReview key={review._id} review = {review} />)
+                }
+            </div>
             <Toaster />
             <ScrollToTop />
         </div>
     );
 };
+
 
 export default RoomDetailsPage;
