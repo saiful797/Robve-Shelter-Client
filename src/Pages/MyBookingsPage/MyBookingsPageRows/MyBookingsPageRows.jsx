@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import { MdCancel, MdOutlineRateReview, MdOutlineUpdate } from 'react-icons/md';
+import { MdCancel, MdOutlineRateReview } from 'react-icons/md';
 import useURL from '../../../Hooks/useURL/useURL';
 import Swal from "sweetalert2";
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { GrDocumentUpdate } from 'react-icons/gr';
 
 const MyBookingsPageRows = ({booking, indx}) => {
     const url = useURL();
@@ -69,9 +70,9 @@ const MyBookingsPageRows = ({booking, indx}) => {
             <th className="border-2 text-lg">
                 <div className='flex justify-center items-center gap-3'>
                     {/* Reviews Button */}
-                    <Link to={`/addReviews/${_id}`} className="btn btn-sm btn-outline btn-success tooltip text-xl" data-tip='Add Review'><MdOutlineRateReview /></Link>
+                    <Link to={`/addReviews/${_id}`} className="btn btn-sm btn-outline btn-success tooltip text-xl flex justify-center items-center" data-tip='Add Review'><MdOutlineRateReview /></Link>
                     {/* Update Button*/}
-                    <Link to={`/UpdatePage/${_id}`} className="btn btn-sm btn-outline btn-warning tooltip text-xl flex justify-center items-center" data-tip='Update Date'><MdOutlineUpdate /></Link>
+                    <Link to={`/UpdatePage/${_id}`} className="btn btn-sm btn-outline btn-warning tooltip text-xl flex justify-center items-center" data-tip='Update Date'><GrDocumentUpdate /></Link>
                     {/* Cancel Button*/}
                     <button onClick={()=>handleBookingCancel(_id)} className="btn btn-sm btn-outline btn-error tooltip text-xl" data-tip='Cancel Booking'><MdCancel /></button>
                 </div>
