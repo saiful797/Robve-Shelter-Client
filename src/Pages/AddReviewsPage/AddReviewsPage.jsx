@@ -25,6 +25,10 @@ const AddReviewsPage = () => {
     },[url, id])
 
     const onSubmit = (data) => {
+        if(data.rating < 0 || data.rating > 5 ){
+            toast.error('Invalid Rating! Please enter valid rating.')
+            return
+        }
         const allData = {...data, specificRoom_id: id, user_name: user.displayName, user_image: user.photoURL, time: moment().format('LT'), date: moment().format('LL')};
         // console.log(allData);
         axios.post(`${url}/reviews`, allData)
