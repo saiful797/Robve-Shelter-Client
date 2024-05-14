@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SpecificRoom = ({room}) => {
     const {_id, image, price,reviews, rating } = room;
-    const ratings = parseFloat(rating / reviews);
+    const ratings = parseFloat(rating / reviews).toFixed(2);
     return (
         <Link to={`/roomDetails/${_id}`} className="tooltip" data-tip="Click for Room Details">
             <div className="card w-80 mx-auto shadow-xl relative bg-black">
