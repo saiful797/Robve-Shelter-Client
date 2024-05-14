@@ -15,9 +15,9 @@ const Room = ({room}) => {
     const {user} = useAuth();
     const {_id, image, room_id, room_size, availability, price, description} = room;
     return (
-        <div className="card w-[350px] h-[650px] bg-blue-950 mx-auto" data-aos="fade-right">
+        <div className="card w-[350px] h-[650px] bg-blue-950 mx-auto">
             <figure><img className='h-72 w-full rounded-b-[60px] border-b-4 border-orange-500' src={image} alt="room image"/></figure>
-            <div className="card-body text-white relative">
+            <div className="card-body text-white relative" data-aos="fade-up" data-aos-duration="1000">
                 {/* <p className='text-white'>{description}</p> */}
                 <h1 className='text-xl font-extralight'>Room ID: <span className='text-xl font-medium'>{room_id}</span></h1>
                 <h2 className='text-xl font-extralight'>Room Size: <span className='text-2xl font-medium'>{room_size}</span></h2>

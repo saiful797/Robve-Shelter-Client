@@ -3,7 +3,10 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 
 const NewsLetterSubscribe = () => {
     return (
-        <div className="mb-5 mt-5">
+        <div 
+            className="mb-5 mt-5"
+            data-aos="zoom-in"
+        >
             <h1 className="text-9xl flex justify-center font-bold text-amber-500">
                 <SlEnvolopeLetter />
             </h1>

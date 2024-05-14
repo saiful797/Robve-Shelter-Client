@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 const SpecificReview = ({review}) => {
     const {rating, comment, user_name, time, date, user_image} = review;
     return (
-        <div className="card w-96 bg-zinc-200 shadow-xl mx-auto">
+        <div 
+            className="card w-96 bg-zinc-200 shadow-xl mx-auto"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+        >
             <div className="card-body">
                 <div className='mx-auto'>
                     <img className='w-24 h-24 rounded-full' src={user_image} alt="" />
