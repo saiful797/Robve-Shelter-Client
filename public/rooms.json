@@ -8,6 +8,7 @@
       "image": "https://i.postimg.cc/QtZTcYWb/19.jpg",
       "offers": "Complimentary breakfast", 
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -19,6 +20,7 @@
       "image": "https://i.postimg.cc/J7cb58xB/2.jpg",
       "offers": "Late check-out",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -30,6 +32,7 @@
       "image": "https://i.postimg.cc/bJ02g0xj/17.jpg",
       "offers": "Complimentary shuttle service",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -41,6 +44,7 @@
       "image": "https://i.postimg.cc/3Jf0txvW/15.jpg",
       "offers": "Outdoor barbecue area",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -52,6 +56,7 @@
       "image": "https://i.postimg.cc/FHyXxmG8/14.jpg",
       "offers": "VIP concierge service",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -63,6 +68,7 @@
       "image": "https://i.postimg.cc/4xDbXRgf/18.jpg",
       "offers": "Outdoor barbecue area",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -74,6 +80,7 @@
       "image": "https://i.postimg.cc/kGgWTnxc/16.jpg",
       "offers": "Airport transfer",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -85,6 +92,7 @@
       "image": "https://i.postimg.cc/rsstSfkZ/20.jpg",
       "offers": "Complimentary wine tasting",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -96,6 +104,7 @@
       "image": "https://i.postimg.cc/GhZsyPSz/21.jpg",
       "offers": "24-hour room service",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     },
     {
@@ -107,6 +116,7 @@
       "image": "https://i.postimg.cc/BbPnSks3/22.jpg",
       "offers":"Complimentary snorkeling gear",
       "reviews": 0,
+      "rating" : 0,
       "user_email": ""
     }
   ]

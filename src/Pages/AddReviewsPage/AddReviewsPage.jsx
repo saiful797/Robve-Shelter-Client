@@ -1,29 +1,47 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useURL from "../../Hooks/useURL/useURL";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import { useForm } from "react-hook-form";
 import moment from "moment";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 const AddReviewsPage = () => {
+    const navigate = useNavigate();
     const url = useURL();
     const {user} = useAuth();
     const data = useParams();
     const id = data.id;
     const {register, reset, handleSubmit} = useForm();
 
+    const [rooms, setRooms] = useState();
+
+    useEffect(() => {
+        axios.get(`${url}/specificRoom/${id}`)
+        .then(res => {
+            setRooms(res.data);
+        })
+    },[url, id])
 
     const onSubmit = (data) => {
         const allData = {...data, specificRoom_id: id, user_name: user.displayName, time: moment().format('LT'), date: moment().format('LL')};
         // console.log(allData);
         axios.post(`${url}/reviews`, allData)
-         .then(res => {
+        .then(res => {
             // console.log(res);
             if(res.data.insertedId){
                 toast.success('Your review added successfully!');
+                navigate('/myBookings');
             }
-         })
+        })
+
+        const reviewData = {reviews: rooms.reviews + 1, rating: parseInt(data.rating) + rooms.rating };
+
+        axios.put(`${url}/roomReviews/${id}`, reviewData)
+        .then(res => {
+            console.log(res.data)
+        })
 
         reset();
     }
