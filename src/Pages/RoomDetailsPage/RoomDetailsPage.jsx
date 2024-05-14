@@ -87,6 +87,10 @@ const RoomDetailsPage = () => {
                     </div>   
                 </div>
             </div>
+
+            {/* <div>
+                <h1 className="">User Reviews</h1>
+            </div> */}
             <Toaster />
             <ScrollToTop />
         </div>

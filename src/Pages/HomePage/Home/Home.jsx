@@ -5,6 +5,7 @@ import Slider from "../Slider/Slider";
 import FeaturedRooms from "../featuredRooms/FeaturedRooms";
 import OffersModal from "../OffersModal/OffersModal";
 import { useState } from "react";
+import UserReviews from "../UserReviews/UserReviews";
 
 const Home = () => {
     const [showPopup, setShowPopup] = useState(true);
@@ -29,11 +30,17 @@ const Home = () => {
             
             <h1 className="text-4xl md:text-6xl font-bold text-center mt-10 mb-5">
                     Featured Rooms
-                </h1>
+            </h1>
             <div className=" mx-auto bg-slate-400 pt-5 pb-5 rounded-3xl">
                 <FeaturedRooms />
             </div>
-            
+
+            <h1 className="text-4xl md:text-6xl font-bold text-center mt-10 mb-5">
+                    User Reviews
+            </h1>
+            <div className=" mx-auto bg-slate-400 pt-5 pb-5 rounded-3xl">
+                <UserReviews />
+            </div>
             <div className="mx-auto flex justify-center items-center shadow shadow-black mt-16 lg:w-3/4">
                 <NewsLetterSubscribe />
             </div>

@@ -25,7 +25,7 @@ const AddReviewsPage = () => {
     },[url, id])
 
     const onSubmit = (data) => {
-        const allData = {...data, specificRoom_id: id, user_name: user.displayName, time: moment().format('LT'), date: moment().format('LL')};
+        const allData = {...data, specificRoom_id: id, user_name: user.displayName, user_image: user.photoURL, time: moment().format('LT'), date: moment().format('LL')};
         // console.log(allData);
         axios.post(`${url}/reviews`, allData)
         .then(res => {
