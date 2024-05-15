@@ -32,6 +32,7 @@ const FirebaseProvider = ({children}) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
+    
     // Log in with PopUp
     const googleSignIn = () =>{
         setLoading(true);
