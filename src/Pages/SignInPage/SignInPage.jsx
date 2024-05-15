@@ -11,7 +11,6 @@ import { TiArrowRightOutline } from "react-icons/ti";
 import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import useURL from "../../Hooks/useURL/useURL";
-// import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
 const SignInPage = () => {
@@ -37,11 +36,10 @@ const SignInPage = () => {
             // navigate(location?.state? location?.state : '/');
 
             const user ={ email: result.user.email };
-            // get access token
-            axios.post(`${url}/jwt`, user)
-            .then(res => {
-                console.log(res);
-            }) 
+           axios.post(`${url}/jwt`, user)
+           .then( res => {
+             console.log("Response: ", res.data);
+           })
             reset();
         })
         .catch(error => {
