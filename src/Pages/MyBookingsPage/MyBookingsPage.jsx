@@ -11,14 +11,12 @@ const MyBookingsPage = () => {
     const [myBookings, setMyBookings] = useState([]);
 
     useEffect(() => {
-        axios.get(`${url}/myBookings`)
+        axios.get(`${url}/myBookings?email=${user.email}`, { withCredentials: true })
         .then(res => {
             setMyBookings(res.data);
             // console.log(res.data);
         })
-    },[url]);
-
-    const allMyBookings = myBookings.filter(myBooking => myBooking.user_email === user.email);
+    },[url, user.email]);
 
     return (
         <div className="overflow-x-auto mt-10 min-h-[50vh]">
@@ -42,7 +40,7 @@ const MyBookingsPage = () => {
                 <tbody className="text-center">
                     {/* row 1 */}
                     {
-                        allMyBookings.map((booking, indx) => <MyBookingsPageRows key={booking._id} indx={indx} booking={booking}/>)
+                        myBookings.map((booking, indx) => <MyBookingsPageRows key={booking._id} indx={indx} booking={booking}/>)
                     }
                 </tbody>    
             </table>

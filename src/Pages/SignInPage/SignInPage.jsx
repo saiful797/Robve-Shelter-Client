@@ -35,10 +35,16 @@ const SignInPage = () => {
             // console.log(result.user);
             // navigate(location?.state? location?.state : '/');
 
-            const user ={ email: result.user.email };
-           axios.post(`${url}/jwt`, user)
+            const user ={ email };
+           axios.post(`${url}/jwt`, user, {withCredentials: true})
            .then( res => {
              console.log("Response: ", res.data);
+             if(res.data.success){
+                navigate(location?.state? location?.state : '/');
+             }
+           })
+           .catch(error => {
+                console.log(error);
            })
             reset();
         })
